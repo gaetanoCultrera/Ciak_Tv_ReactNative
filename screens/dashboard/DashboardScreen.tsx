@@ -14,9 +14,8 @@ export const DashboardScreen = () => {
   const [currentPageUpComing, setCurrentPageUpComing] = useState(1);
   const [currentPageTopRated, setCurrentTopRated] = useState(1);
   const [currentPagePopularMovie, setCurrentPagePopularMovie] = useState(1);
-  const [refreshing, setRefreshing] = useState(false);
 
-  const onRefresh = useSetOnRefresh(setRefreshing);
+  const onRefresh = useSetOnRefresh();
 
   const {
     data: { results: resultsUpComing, total_pages: totalPagesUpComing } = {},
@@ -51,7 +50,9 @@ export const DashboardScreen = () => {
         <ScrollView
           refreshControl={
             <RefreshControl
-              refreshing={refreshing}
+              refreshing={
+                isLoadingUpComing || isLoadingPopularMovies || isLoadingTopRated
+              }
               onRefresh={onRefresh}
               progressBackgroundColor={"white"}
             />
