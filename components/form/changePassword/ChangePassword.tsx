@@ -16,6 +16,7 @@ export const ChangePassword = () => {
   const handleValidationProfile = useValidationProfileSchema();
 
   const [secureTextEntry, setSecureTextEntry] = useState(true);
+
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={container}>
@@ -114,6 +115,7 @@ export const ChangePassword = () => {
                   >
                     <Text>{errors.confirmPassword}</Text>
                   </HelperText>
+
                   <Button
                     icon="send"
                     disabled={!isValid}

@@ -1,4 +1,4 @@
-import React, { FC, memo, useEffect, useMemo } from "react";
+import React, { FC, memo, useEffect } from "react";
 import { IPropsDetailsBanner } from "../../../interfaces/IPropsCard";
 import { GestureResponderEvent, View } from "react-native";
 import { Card, IconButton } from "react-native-paper";
@@ -14,8 +14,9 @@ import { useRenderGenres } from "./utils/hooks/useRenderGenres";
 import { TextContent } from "../../text/TextContent";
 import { Variant } from "../../../constans/Variant";
 import { useNavigation } from "@react-navigation/native";
-import WebView from "react-native-webview";
 import * as Animatable from "react-native-animatable";
+import { YoutubeButton } from "../../button/youtubeButton/YoutubeButton";
+import { useRenderVideo } from "./utils/hooks/useRenderVideo";
 
 export const DetailsBanner: FC<IPropsDetailsBanner> = memo((props) => {
   const {
@@ -25,20 +26,15 @@ export const DetailsBanner: FC<IPropsDetailsBanner> = memo((props) => {
     overview,
     vote_average,
     genres,
-    videos: { results },
+    videos: {
+      results: [{ key }],
+    },
   } = props;
 
   const navigation = useNavigation();
   const handleFavorite = useHandleFavorite(props);
   const renderGenres = useRenderGenres({ genres, otherItemStyle });
-
-  const renderVideo = useMemo(() => {
-    return (
-      <WebView
-        source={{ uri: `https://www.youtube.com/embed/${results[0].key}` }}
-      />
-    );
-  }, [results]);
+  const { renderApp, renderVideo } = useRenderVideo({ key });
 
   useEffect(() => {
     navigation.setOptions({ title });
@@ -84,6 +80,7 @@ export const DetailsBanner: FC<IPropsDetailsBanner> = memo((props) => {
                 }
               />
             </Animatable.View>
+            <YoutubeButton handleApp={renderApp} />
           </Card.Actions>
           {renderVideo}
         </Card.Content>

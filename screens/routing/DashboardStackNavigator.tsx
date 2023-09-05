@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { SearchScreen } from "../search/SearchScreen";
 import { FavoriteScreen } from "../favorite/FavoriteScreen";
 import { ProfileScreen } from "../profile/ProfileScreen";
+import { TheaterScreen } from "../theater/TheaterScreen";
 
 const Tab = createBottomTabNavigator();
 export const DashboardStackNavigator = () => {
@@ -31,6 +32,13 @@ export const DashboardStackNavigator = () => {
         component={FavoriteScreen}
         options={{
           tabBarIcon: () => renderIcon("cards-heart"),
+        }}
+      />
+      <Tab.Screen
+        name={Route.THEATER}
+        component={TheaterScreen}
+        options={{
+          tabBarIcon: () => renderIcon("theater"),
         }}
       />
       <Tab.Screen

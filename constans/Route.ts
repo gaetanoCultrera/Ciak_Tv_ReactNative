@@ -6,4 +6,5 @@ export enum Route {
   DETAILS = "Details",
   FAVORITE = "Favorite",
   SEARCH = "Search",
+  THEATER = "Theater",
 }
