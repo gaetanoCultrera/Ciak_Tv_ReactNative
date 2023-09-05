@@ -6,11 +6,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { IFormProfile } from "../../../../../interfaces/IFormAuth";
 import { IOnSubmitProp } from "../../../../../interfaces/IOnSubmitProp";
 import { ToastAndroid } from "react-native";
-import {
-  authenticateAsync,
-  isEnrolledAsync,
-  hasHardwareAsync,
-} from "expo-local-authentication";
+import { authenticateAsync } from "expo-local-authentication";
 export const useHandleProfile = () => {
   const dataUser = useSelector(
     ({ objectSignUp }: RootState) => objectSignUp.dataSignup
@@ -23,34 +19,33 @@ export const useHandleProfile = () => {
       { setSubmitting, resetForm }: IOnSubmitProp
     ) => {
       try {
-        if ((await hasHardwareAsync()) && (await isEnrolledAsync())) {
-          const { success } = await authenticateAsync({
-            promptMessage: "Biometric authentication required",
-          });
-          if (success) {
-            setSubmitting(true);
-            await AsyncStorage.setItem(
-              "userData",
-              JSON.stringify({
-                ...dataUser,
-                password: newPassword,
-              })
-            );
-            dispatch(
-              updateObjectAuth({
-                ...dataUser,
-                password: newPassword,
-              })
-            );
-            setSubmitting(false);
-            resetForm();
-            ToastAndroid.show(
-              "Password successfully changed!",
-              ToastAndroid.SHORT
-            );
-          }
+        const { success } = await authenticateAsync({
+          promptMessage: "Biometric authentication required",
+          disableDeviceFallback: false,
+        });
+        if (success) {
+          setSubmitting(true);
+          await AsyncStorage.setItem(
+            "userData",
+            JSON.stringify({
+              ...dataUser,
+              password: newPassword,
+            })
+          );
+          dispatch(
+            updateObjectAuth({
+              ...dataUser,
+              password: newPassword,
+            })
+          );
+          setSubmitting(false);
+          resetForm();
+          ToastAndroid.show(
+            "Password successfully changed!",
+            ToastAndroid.SHORT
+          );
         } else {
-          console.log("error");
+          console.log("dispositivo non compatibile");
         }
       } catch (e) {
         console.log("Error :", e);
