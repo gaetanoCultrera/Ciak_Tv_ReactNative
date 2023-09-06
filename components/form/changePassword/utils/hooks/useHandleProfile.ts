@@ -7,6 +7,8 @@ import { IFormProfile } from "../../../../../interfaces/IFormAuth";
 import { IOnSubmitProp } from "../../../../../interfaces/IOnSubmitProp";
 import { ToastAndroid, Linking, Alert } from "react-native";
 import { authenticateAsync } from "expo-local-authentication";
+// import { hasPlatformFeatureAsync } from "expo-device";
+
 export const useHandleProfile = () => {
   const dataUser = useSelector(
     ({ objectSignUp }: RootState) => objectSignUp.dataSignup
@@ -18,7 +20,6 @@ export const useHandleProfile = () => {
       { newPassword }: Pick<IFormProfile, "newPassword">,
       { setSubmitting, resetForm }: IOnSubmitProp
     ) => {
-      //non utilizzati ulteriori controlli perchè il dispositivo auto capisce se può usare il fingerprint, conviene utilizzarli solo quando si vuole per forza una auth biometrica
       try {
         const { success } = await authenticateAsync({
           promptMessage: "Authentication required",
