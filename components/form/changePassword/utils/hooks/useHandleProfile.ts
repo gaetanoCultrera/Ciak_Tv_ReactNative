@@ -16,7 +16,7 @@ export const useHandleProfile = () => {
     ({ objectSignUp }: RootState) => objectSignUp.dataSignup
   );
   const dispatch = useDispatch();
-  //TODO aggiungere controllo di controllo hardware dispositivo
+
   return useCallback(
     async (
       { newPassword }: Pick<IFormProfile, "newPassword">,

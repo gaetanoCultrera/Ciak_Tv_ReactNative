@@ -28,7 +28,6 @@ const ProfileCard = () => {
         left={leftContent}
       />
       <Card.Actions>
-        {/* TODO fare i custom button */}
         <Button icon={"account-off"} onPress={handleSetLogout}>
           Logout
         </Button>
