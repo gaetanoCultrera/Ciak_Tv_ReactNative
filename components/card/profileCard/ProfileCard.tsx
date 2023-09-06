@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
-import React, { useCallback } from "react";
+import React from "react";
 import { Button, Card, Text } from "react-native-paper";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../store/store";
-import { AvatarIcon } from "../../index";
 import { useHandleSetLogout } from "./utils/hooks/useHandleSetLogout";
 import { useHandleSetDeleteAccount } from "./utils/hooks/useHandleSetDeleteAccount";
+import { useLeftContent } from "./utils/useLeftContent";
 
 const ProfileCard = () => {
   const { username, email } = useSelector(
@@ -14,11 +14,7 @@ const ProfileCard = () => {
 
   const handleSetLogout = useHandleSetLogout();
   const handleDeleteAccount = useHandleSetDeleteAccount();
-
-  const leftContent = useCallback(
-    () => <AvatarIcon nameIcon={"account"} />,
-    []
-  );
+  const leftContent = useLeftContent();
 
   return (
     <Card style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
@@ -28,7 +24,6 @@ const ProfileCard = () => {
         left={leftContent}
       />
       <Card.Actions>
-        {/* TODO fare i custom button */}
         <Button icon={"account-off"} onPress={handleSetLogout}>
           Logout
         </Button>
