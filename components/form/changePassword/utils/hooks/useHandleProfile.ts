@@ -5,12 +5,8 @@ import { RootState } from "../../../../../store/store";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { IFormProfile } from "../../../../../interfaces/IFormAuth";
 import { IOnSubmitProp } from "../../../../../interfaces/IOnSubmitProp";
-import { ToastAndroid } from "react-native";
-import {
-  authenticateAsync,
-  isEnrolledAsync,
-  hasHardwareAsync,
-} from "expo-local-authentication";
+import { ToastAndroid, Linking, Alert } from "react-native";
+import { authenticateAsync } from "expo-local-authentication";
 export const useHandleProfile = () => {
   const dataUser = useSelector(
     ({ objectSignUp }: RootState) => objectSignUp.dataSignup
@@ -22,35 +18,48 @@ export const useHandleProfile = () => {
       { newPassword }: Pick<IFormProfile, "newPassword">,
       { setSubmitting, resetForm }: IOnSubmitProp
     ) => {
+      //non utilizzati ulteriori controlli perchè il dispositivo auto capisce se può usare il fingerprint, conviene utilizzarli solo quando si vuole per forza una auth biometrica
       try {
-        if ((await hasHardwareAsync()) && (await isEnrolledAsync())) {
-          const { success } = await authenticateAsync({
-            promptMessage: "Biometric authentication required",
-          });
-          if (success) {
-            setSubmitting(true);
-            await AsyncStorage.setItem(
-              "userData",
-              JSON.stringify({
-                ...dataUser,
-                password: newPassword,
-              })
-            );
-            dispatch(
-              updateObjectAuth({
-                ...dataUser,
-                password: newPassword,
-              })
-            );
-            setSubmitting(false);
-            resetForm();
-            ToastAndroid.show(
-              "Password successfully changed!",
-              ToastAndroid.SHORT
-            );
-          }
+        const { success } = await authenticateAsync({
+          promptMessage: "Authentication required",
+        });
+        if (success) {
+          setSubmitting(true);
+          await AsyncStorage.setItem(
+            "userData",
+            JSON.stringify({
+              ...dataUser,
+              password: newPassword,
+            })
+          );
+          dispatch(
+            updateObjectAuth({
+              ...dataUser,
+              password: newPassword,
+            })
+          );
+          setSubmitting(false);
+          resetForm();
+          ToastAndroid.show(
+            "Password successfully changed!",
+            ToastAndroid.SHORT
+          );
         } else {
-          console.log("dispositivo non compatibile");
+          Alert.alert(
+            "Error in authentication",
+            "Have you registered a type of authentication? check here",
+            [
+              {
+                text: "Cancel",
+              },
+              {
+                text: "OK",
+                onPress: () => {
+                  void Linking.sendIntent("android.settings.SECURITY_SETTINGS");
+                },
+              },
+            ]
+          );
         }
       } catch (e) {
         console.log("Error :", e);

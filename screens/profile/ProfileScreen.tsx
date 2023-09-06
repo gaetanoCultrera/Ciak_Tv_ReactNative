@@ -7,25 +7,23 @@ const Tab = createBottomTabNavigator();
 export const ProfileScreen = () => {
   const renderIcon = useRenderIcon();
   return (
-    <>
-      <Tab.Navigator>
-        <Tab.Screen
-          name="DetailsProfile"
-          component={ProfileCard}
-          options={{
-            tabBarIcon: () => renderIcon("account"),
-            title: "Details Profile",
-          }}
-        />
-        <Tab.Screen
-          name="ChangePassword"
-          component={ChangePassword}
-          options={{
-            tabBarIcon: () => renderIcon("keyboard-settings"),
-            title: "Change Password",
-          }}
-        />
-      </Tab.Navigator>
-    </>
+    <Tab.Navigator>
+      <Tab.Screen
+        name="DetailsProfile"
+        component={ProfileCard}
+        options={{
+          tabBarIcon: () => renderIcon("account"),
+          title: "Details Profile",
+        }}
+      />
+      <Tab.Screen
+        name="ChangePassword"
+        component={ChangePassword}
+        options={{
+          tabBarIcon: () => renderIcon("keyboard-settings"),
+          title: "Change Password",
+        }}
+      />
+    </Tab.Navigator>
   );
 };

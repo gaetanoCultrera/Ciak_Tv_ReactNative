@@ -26,6 +26,7 @@
     "expo": "^49.0.7",
     "expo-camera": "~13.4.2",
     "expo-dev-client": "^2.4.6",
+    "expo-device": "~5.4.0",
     "expo-local-authentication": "~13.4.1",
     "expo-status-bar": "~1.6.0",
     "formik": "^2.4.3",
