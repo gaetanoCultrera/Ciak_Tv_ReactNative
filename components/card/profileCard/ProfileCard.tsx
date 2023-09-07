@@ -1,37 +1,46 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
-import React from "react";
+import React, { useState, useCallback } from "react";
 import { Button, Card, Text } from "react-native-paper";
-import { useSelector } from "react-redux";
-import { RootState } from "../../../store/store";
+import { Alert, TouchableOpacity } from "react-native";
 import { useHandleSetLogout } from "./utils/hooks/useHandleSetLogout";
 import { useHandleSetDeleteAccount } from "./utils/hooks/useHandleSetDeleteAccount";
-import { useLeftContent } from "./utils/useLeftContent";
+import { CardHeader } from "./utils/cardHeader/CardHeader";
+import { Camera } from "expo-camera";
+import { ProfileCamera } from "./profileCamera/ProfileCamera";
 
 const ProfileCard = () => {
-  const { username, email } = useSelector(
-    ({ objectSignUp }: RootState) => objectSignUp.dataSignup
-  );
-
+  const [showCamera, setShowCamera] = useState(false);
   const handleSetLogout = useHandleSetLogout();
   const handleDeleteAccount = useHandleSetDeleteAccount();
-  const leftContent = useLeftContent();
+
+  const __startCamera = useCallback(async () => {
+    const { granted } = await Camera.requestCameraPermissionsAsync();
+    granted ? setShowCamera(true) : Alert.alert("Access denied");
+  }, []);
 
   return (
-    <Card style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Card.Title
-        title={<Text variant="titleLarge">Hello! {username}</Text>}
-        subtitle={<Text variant="bodyMedium">{email}</Text>}
-        left={leftContent}
-      />
-      <Card.Actions>
-        <Button icon={"account-off"} onPress={handleSetLogout}>
-          Logout
-        </Button>
-        <Button icon={"delete"} onPress={handleDeleteAccount}>
-          Delete Account
-        </Button>
-      </Card.Actions>
-    </Card>
+    <>
+      {showCamera ? (
+        <ProfileCamera setShowCamera={setShowCamera} />
+      ) : (
+        <Card
+          style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+        >
+          <CardHeader />
+          <Card.Actions>
+            <Button icon={"account-off"} onPress={handleSetLogout}>
+              Logout
+            </Button>
+            <Button icon={"delete"} onPress={handleDeleteAccount}>
+              Delete Account
+            </Button>
+          </Card.Actions>
+          <TouchableOpacity onPress={__startCamera}>
+            <Text>Open Camera</Text>
+          </TouchableOpacity>
+        </Card>
+      )}
+    </>
   );
 };
 

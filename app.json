@@ -6,6 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
+    "permissions": ["CAMERA"],
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
