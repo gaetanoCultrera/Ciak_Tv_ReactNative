@@ -7,7 +7,6 @@ import { IFormProfile } from "../../../../../interfaces/IFormAuth";
 import { IOnSubmitProp } from "../../../../../interfaces/IOnSubmitProp";
 import { ToastAndroid, Linking, Alert } from "react-native";
 import { authenticateAsync } from "expo-local-authentication";
-// import { hasPlatformFeatureAsync } from "expo-device";
 
 export const useHandleProfile = () => {
   const dataUser = useSelector(
@@ -47,7 +46,7 @@ export const useHandleProfile = () => {
           );
         } else {
           Alert.alert(
-            "Error in authentication",
+            "Something Wrong",
             "Have you registered a type of authentication? check here",
             [
               {
