@@ -6,6 +6,7 @@ import { IPropsProfileCamera } from "../../../../interfaces/IPropsProfileCamera"
 import { useSelector } from "react-redux";
 import { RootState } from "../../../../store/store";
 import { AvatarImage } from "../../../icon/AvatarImage";
+import { AvatarIcon } from "../../../icon/AvatarIcon";
 
 export const ProfileImage: FC<IPropsProfileCamera> = ({ setShowCamera }) => {
   const { uriProfileImg } = useSelector(
@@ -16,7 +17,11 @@ export const ProfileImage: FC<IPropsProfileCamera> = ({ setShowCamera }) => {
   return (
     <View style={{ display: "flex", alignItems: "center" }}>
       <TouchableOpacity onPress={__startCamera}>
-        <AvatarImage size={100} uriProfileImg={uriProfileImg} />
+        {uriProfileImg ? (
+          <AvatarImage size={100} uriProfileImg={uriProfileImg} />
+        ) : (
+          <AvatarIcon size={100} nameIcon="account" />
+        )}
       </TouchableOpacity>
     </View>
   );

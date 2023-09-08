@@ -15,6 +15,8 @@ export const ProfileCamera: FC<IPropsProfileCamera> = memo(
     const [flashMode, setFlashMode] = useState(FlashMode.off);
     const cameraRef = useRef<Camera>(null);
 
+    //TODO da implementare la preview photo, tasto rifai foto e quando esco dallo screen con la gesture del cellulare settare a false camera
+    //TODO implementare tasto per inserire immagine dall'immagine
     const handleCameraType = useHandleCameraType({ setType });
     const { handleTakePicture, handleFlashMode } = useHandleTakePicture({
       cameraRef,
@@ -37,12 +39,6 @@ export const ProfileCamera: FC<IPropsProfileCamera> = memo(
             <TouchableOpacity style={button} onPress={handleTakePicture}>
               <AvatarIcon nameIcon={"camera-iris"} size={60} />
             </TouchableOpacity>
-            <TouchableOpacity
-              style={button}
-              onPress={() => setShowCamera(false)}
-            >
-              <AvatarIcon nameIcon={"alpha-x-circle"} size={60} />
-            </TouchableOpacity>
             <TouchableOpacity style={button} onPress={handleFlashMode}>
               <AvatarIcon
                 nameIcon={
@@ -50,6 +46,12 @@ export const ProfileCamera: FC<IPropsProfileCamera> = memo(
                 }
                 size={60}
               />
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={button}
+              onPress={() => setShowCamera(false)}
+            >
+              <AvatarIcon nameIcon={"alpha-x-circle"} size={60} />
             </TouchableOpacity>
           </View>
         </Camera>
