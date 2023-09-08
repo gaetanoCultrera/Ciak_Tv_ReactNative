@@ -25,6 +25,12 @@ export interface IPropsBanner {
 
 export interface IPropIcon {
   nameIcon: string;
+  size: number;
+}
+
+export interface IPropProfileImage {
+  uriProfileImg?: string;
+  size: number;
 }
 
 export interface IPropsDetailsBanner {

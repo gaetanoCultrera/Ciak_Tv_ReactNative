@@ -13,3 +13,7 @@ export interface IPropsRenderVideo {
 export interface IPropsRenderYoutubeButton {
   handleApp: () => Promise<void>;
 }
+
+export interface IPropsRenderCamera {
+  __startCamera: () => Promise<void>;
+}

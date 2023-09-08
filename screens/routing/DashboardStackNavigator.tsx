@@ -12,7 +12,12 @@ const Tab = createBottomTabNavigator();
 export const DashboardStackNavigator = () => {
   const renderIcon = useRenderIcon();
   return (
-    <Tab.Navigator initialRouteName={Route.DASHBOARD}>
+    <Tab.Navigator
+      initialRouteName={Route.DASHBOARD}
+      screenOptions={{
+        tabBarHideOnKeyboard: false,
+      }}
+    >
       <Tab.Screen
         name={Route.DASHBOARD}
         component={DashboardScreen}

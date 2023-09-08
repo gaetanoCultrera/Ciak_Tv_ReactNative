@@ -7,7 +7,6 @@ import signupSlice from "./signupSlice";
 import { filmApi } from "../services/film";
 import favoriteSlice from "./favoriteSlice";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
-// import { handleAsyncStorage } from "./utils/handleAsyncStorage";
 
 const rootReducer = combineReducers({
   objectSignUp: signupSlice,

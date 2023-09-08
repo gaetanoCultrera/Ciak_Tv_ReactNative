@@ -20,8 +20,6 @@ const initialState: ObjectSignupState = {
 
 export const signupSlice = createSlice({
   name: "objectSignUp",
-  // `createSlice` will infer the state type from the `initialState` argument
-  // non conviene andare a creare un altro reducer per la gestione del login dove prende lo stato e setta isLogged a true
   initialState,
   reducers: {
     updateObjectAuth: (_, { payload }: PayloadAction<IFormAuth>) => ({
