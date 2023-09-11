@@ -1,25 +1,32 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import React, { FC } from "react";
 import { TouchableOpacity, View } from "react-native";
-import { useHandleCamera } from "./utils/hooks/useHandleCamera";
+import { useHandleOptionCamera } from "./utils/hooks/useHandleOptionCamera";
 import { IPropsProfileCamera } from "../../../../interfaces/IPropsProfileCamera";
 import { AvatarImage } from "../../../icon/AvatarImage";
 import { AvatarIcon } from "../../../icon/AvatarIcon";
+import { containerBadge } from "../../../icon/style";
+import { Badge } from "react-native-paper";
 
 export const ProfileImage: FC<IPropsProfileCamera> = ({
   setShowCamera,
   uriImage,
 }) => {
-  const __startCamera = useHandleCamera({ setShowCamera });
+  const __startCamera = useHandleOptionCamera({ setShowCamera });
 
   return (
     <View style={{ display: "flex", alignItems: "center" }}>
       <TouchableOpacity onPress={__startCamera}>
         {uriImage ? (
-          <AvatarImage size={100} uriProfileImg={uriImage} />
+          <AvatarImage size={300} uriProfileImg={uriImage} />
         ) : (
-          <AvatarIcon size={100} nameIcon="account" />
+          <AvatarIcon size={300} nameIcon="account" />
         )}
+        <View style={containerBadge}>
+          <Badge style={{ backgroundColor: "rgb(120, 69, 172)" }} size={45}>
+            ✏️
+          </Badge>
+        </View>
       </TouchableOpacity>
     </View>
   );

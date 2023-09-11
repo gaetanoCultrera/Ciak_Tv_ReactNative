@@ -2,8 +2,12 @@ import { useCallback } from "react";
 import { Camera } from "expo-camera";
 import { Alert } from "react-native";
 import { IPropsProfileCamera } from "../../../../../../interfaces/IPropsProfileCamera";
+import { useHandleImagePicker } from "./useHandleImagePicker";
 
-export const useHandleCamera = ({ setShowCamera }: IPropsProfileCamera) => {
+export const useHandleOptionCamera = ({
+  setShowCamera,
+}: IPropsProfileCamera) => {
+  const handlePickImage = useHandleImagePicker();
   return useCallback(async () => {
     const { granted } = await Camera.requestCameraPermissionsAsync();
     if (granted) {
@@ -17,6 +21,7 @@ export const useHandleCamera = ({ setShowCamera }: IPropsProfileCamera) => {
           },
           {
             text: "Upload from device",
+            onPress: handlePickImage,
           },
           {
             text: "Open Camera!",
@@ -29,5 +34,5 @@ export const useHandleCamera = ({ setShowCamera }: IPropsProfileCamera) => {
       return;
     }
     Alert.alert("Access denied");
-  }, [setShowCamera]);
+  }, [handlePickImage, setShowCamera]);
 };

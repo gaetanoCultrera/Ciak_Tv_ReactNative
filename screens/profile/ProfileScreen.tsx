@@ -5,12 +5,19 @@ import { ProfileCard } from "../../components/card/profileCard/ProfileCard";
 import { useRenderIcon } from "../routing/utils/hooks/useRenderIcon";
 import { ProfileCamera } from "../../components/card/profileCard/profileCamera/ProfileCamera";
 import { useNavigation } from "@react-navigation/native";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/store";
 const Tab = createBottomTabNavigator();
 export const ProfileScreen = () => {
   const [showCamera, setShowCamera] = useState(false);
-  const renderIcon = useRenderIcon();
+  const { renderIcon, renderImage } = useRenderIcon();
   const navigation = useNavigation();
 
+  const { uriProfileImg } = useSelector(
+    ({ objectSignUp }: RootState) => objectSignUp.dataSignup
+  );
+
+  //TODO quando cambio screen deve chiudersi la fotocamera set(false)
   useEffect(() => {
     if (showCamera) {
       navigation.setOptions({
@@ -31,7 +38,10 @@ export const ProfileScreen = () => {
           <Tab.Screen
             name="DetailsProfile"
             options={{
-              tabBarIcon: () => renderIcon("account"),
+              tabBarIcon: () =>
+                uriProfileImg
+                  ? renderImage(uriProfileImg)
+                  : renderIcon("account"),
               title: "Details Profile",
             }}
           >

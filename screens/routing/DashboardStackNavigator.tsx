@@ -7,10 +7,15 @@ import { SearchScreen } from "../search/SearchScreen";
 import { FavoriteScreen } from "../favorite/FavoriteScreen";
 import { ProfileScreen } from "../profile/ProfileScreen";
 import { TheaterScreen } from "../theater/TheaterScreen";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/store";
 
 const Tab = createBottomTabNavigator();
 export const DashboardStackNavigator = () => {
-  const renderIcon = useRenderIcon();
+  const { uriProfileImg } = useSelector(
+    ({ objectSignUp }: RootState) => objectSignUp.dataSignup
+  );
+  const { renderIcon, renderImage } = useRenderIcon();
   return (
     <Tab.Navigator
       initialRouteName={Route.DASHBOARD}
@@ -50,7 +55,8 @@ export const DashboardStackNavigator = () => {
         name={Route.PROFILE}
         component={ProfileScreen}
         options={{
-          tabBarIcon: () => renderIcon("account-settings"),
+          tabBarIcon: () =>
+            uriProfileImg ? renderImage(uriProfileImg) : renderIcon("account"),
           headerShown: false,
           tabBarShowLabel: false,
         }}
