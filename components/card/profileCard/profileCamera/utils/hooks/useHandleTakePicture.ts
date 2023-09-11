@@ -2,9 +2,9 @@ import { useCallback } from "react";
 import { IPropsTakePicture } from "../../../../../../interfaces/IPropsProfileCamera";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../../../../store/store";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { updateObjectAuth } from "../../../../../../store/signupSlice";
 import { FlashMode } from "expo-camera";
+import { useHandleAsyncStorage } from "../../../../../../screens/routing/utils/hooks/useHandleAsyncStorage";
 
 export const useHandleTakePicture = ({
   cameraRef,
@@ -15,6 +15,7 @@ export const useHandleTakePicture = ({
     ({ objectSignUp }: RootState) => objectSignUp.dataSignup
   );
   const dispatch = useDispatch();
+  const { setItem } = useHandleAsyncStorage();
   const handleTakePicture = useCallback(async () => {
     if (cameraRef.current) {
       try {
@@ -22,7 +23,7 @@ export const useHandleTakePicture = ({
           quality: 0.5,
           base64: true,
         });
-        await AsyncStorage.setItem(
+        await setItem(
           "userData",
           JSON.stringify({
             ...dataUser,
@@ -39,7 +40,7 @@ export const useHandleTakePicture = ({
         console.error("Error:", error);
       }
     }
-  }, [cameraRef, dataUser, dispatch]);
+  }, [cameraRef, dataUser, dispatch, setItem]);
 
   const handleFlashMode = useCallback(() => {
     flashMode === FlashMode.off

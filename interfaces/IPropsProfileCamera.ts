@@ -2,8 +2,8 @@ import { Camera, CameraType, FlashMode } from "expo-camera";
 
 export interface IPropsProfileCamera {
   setShowCamera: React.Dispatch<React.SetStateAction<boolean>>;
+  uriImage?: string;
 }
-
 export interface IPropsTypeCamera {
   setType: React.Dispatch<React.SetStateAction<CameraType>>;
 }

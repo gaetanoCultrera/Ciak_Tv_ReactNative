@@ -2,14 +2,15 @@ import { useCallback } from "react";
 import { IFormAuth } from "../../../../../interfaces";
 import { useDispatch } from "react-redux";
 import { updateObjectAuth } from "../../../../../store/signupSlice";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useHandleAsyncStorage } from "../../../../../screens/routing/utils/hooks/useHandleAsyncStorage";
 
 export const useHandleSignUp = () => {
   const dispatch = useDispatch();
+  const { setItem } = useHandleAsyncStorage();
   return useCallback(
     async ({ email, password, username }: Omit<IFormAuth, "isLogged">) => {
       try {
-        await AsyncStorage.setItem(
+        await setItem(
           "userData",
           JSON.stringify({ email, password, username, isLogged: true })
         );
@@ -21,6 +22,6 @@ export const useHandleSignUp = () => {
         alert("An error occurred while saving data");
       }
     },
-    [dispatch]
+    [dispatch, setItem]
   );
 };

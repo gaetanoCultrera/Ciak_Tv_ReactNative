@@ -6,15 +6,15 @@ import { IFormAuth } from "../../../../interfaces";
 
 export const useCheckUserData = () => {
   const dispatch = useDispatch();
-  const handleLocalStorage = useHandleAsyncStorage();
+  const { getItem } = useHandleAsyncStorage();
   return useCallback(async () => {
     try {
-      const userData = await handleLocalStorage("userData");
+      const userData = await getItem("userData");
       if (userData) {
         dispatch(updateObjectAuth(JSON.parse(userData) as IFormAuth));
       }
     } catch (error) {
       console.error("error:", error);
     }
-  }, [dispatch, handleLocalStorage]);
+  }, [dispatch, getItem]);
 };

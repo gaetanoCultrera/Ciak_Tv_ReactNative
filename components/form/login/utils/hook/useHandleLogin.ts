@@ -2,22 +2,37 @@ import { useCallback } from "react";
 import { updateObjectAuth } from "../../../../../store/signupSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../../../store/store";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useHandleAsyncStorage } from "../../../../../screens/routing/utils/hooks/useHandleAsyncStorage";
 
 export const useHandleOnLogin = () => {
-  const { email, password, username } = useSelector(
+  const { email, password, username, uriProfileImg } = useSelector(
     ({ objectSignUp }: RootState) => objectSignUp.dataSignup
   );
   const dispatch = useDispatch();
+  const { setItem } = useHandleAsyncStorage();
   return useCallback(async () => {
     try {
-      await AsyncStorage.setItem(
+      await setItem(
         "userData",
-        JSON.stringify({ email, password, username, isLogged: true })
+        JSON.stringify({
+          email,
+          password,
+          username,
+          uriProfileImg,
+          isLogged: true,
+        })
       );
-      dispatch(updateObjectAuth({ email, password, username, isLogged: true }));
+      dispatch(
+        updateObjectAuth({
+          email,
+          password,
+          username,
+          uriProfileImg,
+          isLogged: true,
+        })
+      );
     } catch (e) {
       console.log("Error :", e);
     }
-  }, [email, password, username, dispatch]);
+  }, [setItem, email, password, username, uriProfileImg, dispatch]);
 };

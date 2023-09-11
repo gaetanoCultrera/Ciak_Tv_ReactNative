@@ -1,17 +1,18 @@
 import { useCallback } from "react";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../../../store/store";
 import { updateObjectAuth } from "../../../../../store/signupSlice";
+import { useHandleAsyncStorage } from "../../../../../screens/routing/utils/hooks/useHandleAsyncStorage";
 
 export const useHandleSetLogout = () => {
   const dataUser = useSelector(
     ({ objectSignUp }: RootState) => objectSignUp.dataSignup
   );
   const dispatch = useDispatch();
+  const { setItem } = useHandleAsyncStorage();
   return useCallback(async () => {
     try {
-      await AsyncStorage.setItem(
+      await setItem(
         "userData",
         JSON.stringify({ ...dataUser, isLogged: false })
       );
@@ -19,5 +20,5 @@ export const useHandleSetLogout = () => {
     } catch (error) {
       console.log(error);
     }
-  }, [dataUser, dispatch]);
+  }, [dataUser, dispatch, setItem]);
 };

@@ -8,13 +8,13 @@ import { Variant } from "../../../../../constans/Variant";
 import { ProfileImage } from "../../profileImage/ProfileImage";
 
 export const CardHeader: FC<IPropsProfileCamera> = memo(({ setShowCamera }) => {
-  const { username, email } = useSelector(
+  const { username, email, uriProfileImg } = useSelector(
     ({ objectSignUp }: RootState) => objectSignUp.dataSignup
   );
 
   return (
     <>
-      <ProfileImage setShowCamera={setShowCamera} />
+      <ProfileImage setShowCamera={setShowCamera} uriImage={uriProfileImg} />
       <Card.Title
         title={
           <TextContent

@@ -6,10 +6,10 @@ import { handleLocalStorageReload } from "../../../../store/favoriteSlice";
 
 export const useCheckFavoriteData = () => {
   const dispatch = useDispatch();
-  const handleLocalStorage = useHandleAsyncStorage();
+  const { getItem } = useHandleAsyncStorage();
   return useCallback(async () => {
     try {
-      const favoriteList = await handleLocalStorage("favoriteItem");
+      const favoriteList = await getItem("favoriteItem");
       if (favoriteList) {
         const parsedFavoriteList = JSON.parse(
           favoriteList
@@ -21,5 +21,5 @@ export const useCheckFavoriteData = () => {
     } catch (error) {
       console.error("error:", error);
     }
-  }, [dispatch, handleLocalStorage]);
+  }, [dispatch, getItem]);
 };
