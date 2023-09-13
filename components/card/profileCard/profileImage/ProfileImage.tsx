@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-misused-promises */
 import React, { FC } from "react";
 import { TouchableOpacity, View } from "react-native";
 import { useHandleOptionCamera } from "./utils/hooks/useHandleOptionCamera";
@@ -13,10 +12,10 @@ export const ProfileImage: FC<IPropsProfileCamera> = ({
   uriImage,
 }) => {
   const __startCamera = useHandleOptionCamera({ setShowCamera });
-
+  //TODO gestione promise da custom hook
   return (
     <View style={{ display: "flex", alignItems: "center" }}>
-      <TouchableOpacity onPress={__startCamera}>
+      <TouchableOpacity onPress={() => void __startCamera()}>
         {uriImage ? (
           <AvatarImage size={300} uriProfileImg={uriImage} />
         ) : (

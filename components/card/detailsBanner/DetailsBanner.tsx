@@ -1,6 +1,6 @@
 import React, { FC, memo, useEffect } from "react";
 import { IPropsDetailsBanner } from "../../../interfaces/IPropsCard";
-import { GestureResponderEvent, View } from "react-native";
+import { View } from "react-native";
 import { Card, IconButton } from "react-native-paper";
 import { cardTitle, containerCardTitle } from "../dashboardCard/style";
 import { useHandleFavorite } from "./utils/hooks/useHandleFavorite";
@@ -73,14 +73,11 @@ export const DetailsBanner: FC<IPropsDetailsBanner> = memo((props) => {
                 icon="heart"
                 iconColor={isFavorite ? "red" : "white"}
                 size={50}
-                onPress={
-                  handleFavorite as unknown as (
-                    e: GestureResponderEvent
-                  ) => void
-                }
+                onPress={() => void handleFavorite()}
               />
+              {/* gestione di una promise da un custom hook */}
             </Animatable.View>
-            <YoutubeButton handleApp={renderApp} />
+            <YoutubeButton handleApp={() => void renderApp()} />
           </Card.Actions>
           {renderVideo}
         </Card.Content>

@@ -7,6 +7,7 @@ import { ProfileCamera } from "../../components/card/profileCard/profileCamera/P
 import { useIsFocused, useNavigation } from "@react-navigation/native";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
+
 const Tab = createBottomTabNavigator();
 export const ProfileScreen = () => {
   const [showCamera, setShowCamera] = useState(false);
@@ -30,6 +31,7 @@ export const ProfileScreen = () => {
       });
     }
   }, [isFocused, navigation, showCamera]);
+
   return (
     <>
       {showCamera ? (

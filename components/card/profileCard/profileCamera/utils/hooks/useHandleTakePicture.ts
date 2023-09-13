@@ -36,6 +36,7 @@ export const useHandleTakePicture = ({
             uriProfileImg: uri,
           })
         );
+        alert("Profile Photo correctly changed");
       } catch (error) {
         console.error("Error:", error);
       }

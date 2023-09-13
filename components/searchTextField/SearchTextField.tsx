@@ -6,7 +6,7 @@ import { useRenderIcon } from "../../screens/routing/utils/hooks/useRenderIcon";
 
 export const SearchTextField: FC<IPropsTextField> = memo(
   ({ queryString, setQueryString }) => {
-    const renderIcon = useRenderIcon();
+    const { renderIcon } = useRenderIcon();
     return (
       <View style={{ padding: 40 }}>
         <TextInput

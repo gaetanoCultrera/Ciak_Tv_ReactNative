@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-misused-promises */
 import React, { FC, memo } from "react";
 import { Card } from "react-native-paper";
 import { useHandleSetLogout } from "../hooks/useHandleSetLogout";
@@ -19,7 +18,7 @@ export const CardBody: FC = memo(() => {
       <UserActionButton
         title={"Delete Account"}
         icon={Icon.DELETEACCOUNT}
-        handleAction={handleDeleteAccount}
+        handleAction={() => void handleDeleteAccount()}
       />
     </Card.Actions>
   );

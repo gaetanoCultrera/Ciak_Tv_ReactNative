@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import { Formik } from "formik";
-import {
-  View,
-  Text,
-  GestureResponderEvent,
-  Keyboard,
-  TouchableWithoutFeedback,
-} from "react-native";
+import { View, Text, Keyboard, TouchableWithoutFeedback } from "react-native";
 import { Button, Card, HelperText, TextInput } from "react-native-paper";
 import { useHandleSignUp } from "./utils/hook/useHandleSignUp";
 import { validationSchemaSignUp } from "./validation/ValidationSchema";
@@ -127,11 +121,7 @@ export const SignUp = () => {
                   <Button
                     icon="send"
                     disabled={!isValid}
-                    onPress={
-                      handleSubmit as unknown as (
-                        e: GestureResponderEvent
-                      ) => void
-                    }
+                    onPress={() => void handleSubmit()}
                   >
                     Send
                   </Button>

@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  GestureResponderEvent,
-  Keyboard,
-  TouchableWithoutFeedback,
-  View,
-} from "react-native";
+import { Keyboard, TouchableWithoutFeedback, View } from "react-native";
 import { container } from "../style";
 import { Card, HelperText, TextInput, Text, Button } from "react-native-paper";
 import { Formik } from "formik";
@@ -119,11 +114,7 @@ export const ChangePassword = () => {
                   <Button
                     icon="send"
                     disabled={!isValid}
-                    onPress={
-                      handleSubmit as unknown as (
-                        e: GestureResponderEvent
-                      ) => void
-                    }
+                    onPress={() => void handleSubmit()}
                   >
                     Send
                   </Button>

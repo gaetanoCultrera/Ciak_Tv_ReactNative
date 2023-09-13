@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-misused-promises */
 import React, { useState, FC, memo, useRef } from "react";
 import { View, TouchableOpacity } from "react-native";
 import { Camera, CameraType, FlashMode } from "expo-camera";
@@ -8,7 +7,7 @@ import { button, buttonContainer, camera, container } from "./style";
 import { useHandleTakePicture } from "./utils/hooks/useHandleTakePicture";
 import { AvatarIcon } from "../../../icon/AvatarIcon";
 import { Icon } from "../../../../constans/Icon";
-
+import { useHandleHardwareBackPressAndroid } from "./utils/hooks/useHandleHardwareBackPressAndroid";
 export const ProfileCamera: FC<IPropsProfileCamera> = memo(
   ({ setShowCamera }) => {
     const [type, setType] = useState(CameraType.back);
@@ -22,6 +21,8 @@ export const ProfileCamera: FC<IPropsProfileCamera> = memo(
       setFlashMode,
     });
 
+    useHandleHardwareBackPressAndroid(setShowCamera);
+
     return (
       <View style={container}>
         <Camera
@@ -34,7 +35,10 @@ export const ProfileCamera: FC<IPropsProfileCamera> = memo(
             <TouchableOpacity style={button} onPress={handleCameraType}>
               <AvatarIcon nameIcon={"camera-party-mode"} size={60} />
             </TouchableOpacity>
-            <TouchableOpacity style={button} onPress={handleTakePicture}>
+            <TouchableOpacity
+              style={button}
+              onPress={() => void handleTakePicture()}
+            >
               <AvatarIcon nameIcon={"camera-iris"} size={60} />
             </TouchableOpacity>
             <TouchableOpacity style={button} onPress={handleFlashMode}>
