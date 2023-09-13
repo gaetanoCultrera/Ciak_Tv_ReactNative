@@ -8,9 +8,9 @@ import { DetailsBanner } from "../../components/card/detailsBanner/DetailsBanner
 import { RenderEmptyList } from "../../components/listCards/utils/renderEmptyList/RenderEmptyList";
 
 export const DetailsScreen = () => {
-  const route = useRoute();
+  const { params } = useRoute();
 
-  const { movieId } = route.params as IDetailsId;
+  const { movieId } = params as IDetailsId;
   const { data, error, isLoading } = useGetUpcomingMoviesByIdQuery(movieId);
 
   const isFavorite = useSelector(({ favoriteItems }: RootState) =>

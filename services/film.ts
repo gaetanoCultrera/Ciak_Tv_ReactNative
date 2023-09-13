@@ -5,12 +5,9 @@ import { ISearchQueryParams } from "../interfaces/ISearchQueryParams";
 export const filmApi = createApi({
   reducerPath: "filmApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://api.themoviedb.org/3",
+    baseUrl: process.env.EXPO_PUBLIC_API_URL,
     prepareHeaders: (headers) => {
-      headers.set(
-        "Authorization",
-        `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNzVkOTY3YmJhNzIwYmE0NDNhOWUyZWQ3MTNiZDA0MCIsInN1YiI6IjY0YjU0ZTQ5ZTBjYTdmMDE0NDJiMWFlOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fPSG25hezqUxnszHRVT6IXWKZpVYUYiFR08rfWPjA80`
-      );
+      headers.set("Authorization", `Bearer ${process.env.EXPO_PUBLIC_API_KEY}`);
     },
   }),
   refetchOnFocus: true,
