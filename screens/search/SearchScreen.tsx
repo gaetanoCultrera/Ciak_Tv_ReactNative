@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useGetFilmBySearchQuery } from "../../services/film";
 import { ListCards } from "../../components/listCards/ListCards";
-import { SearchTextField } from "../../components/searchTextField/SearchTextField";
 import { SafeAreaView } from "react-native";
 import { containerSearch } from "./style";
 import { useNavigation } from "@react-navigation/native";
+import { useRenderInputText } from "./utils/hooks/useRenderInputText";
 
 export const SearchScreen = () => {
   const navigation = useNavigation();
@@ -18,17 +18,13 @@ export const SearchScreen = () => {
     queryString: queryString,
     pageNumber: currentPage,
   });
+  const renderTextField = useRenderInputText();
 
   useEffect(() => {
     navigation.setOptions({
-      header: () => (
-        <SearchTextField
-          queryString={queryString}
-          setQueryString={setQueryString}
-        />
-      ),
+      header: () => renderTextField({ queryString, setQueryString }),
     });
-  }, [navigation, queryString]);
+  }, [navigation, queryString, renderTextField]);
 
   return (
     <SafeAreaView style={containerSearch}>
