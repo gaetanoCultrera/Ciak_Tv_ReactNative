@@ -70,7 +70,7 @@ export const Login = () => {
                   <Button
                     icon="send"
                     disabled={!isValid}
-                    onPress={() => void handleSubmit()}
+                    onPress={() => handleSubmit()}
                   >
                     Send
                   </Button>
