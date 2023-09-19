@@ -2,48 +2,40 @@ import { useCallback } from "react";
 import { updateObjectAuth } from "../../../../../store/signupSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../../../store/store";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { IFormProfile } from "../../../../../interfaces/IFormAuth";
 import { IOnSubmitProp } from "../../../../../interfaces/IOnSubmitProp";
 import { ToastAndroid, Linking, Alert } from "react-native";
 import { authenticateAsync } from "expo-local-authentication";
 
 export const useHandleProfile = () => {
-  const dataUser = useSelector(
-    ({ objectSignUp }: RootState) => objectSignUp.dataSignup
-  );
+  const dataUser = useSelector(({ userData }: RootState) => userData);
   const dispatch = useDispatch();
-
+  //TODO aggiungere controllo di controllo hardware dispositivo
   return useCallback(
     async (
       { newPassword }: Pick<IFormProfile, "newPassword">,
       { setSubmitting, resetForm }: IOnSubmitProp
     ) => {
       try {
-        const { success } = await authenticateAsync({
-          promptMessage: "Authentication required",
-        });
-        if (success) {
-          setSubmitting(true);
-          await AsyncStorage.setItem(
-            "userData",
-            JSON.stringify({
-              ...dataUser,
-              password: newPassword,
-            })
-          );
-          dispatch(
-            updateObjectAuth({
-              ...dataUser,
-              password: newPassword,
-            })
-          );
-          setSubmitting(false);
-          resetForm();
-          ToastAndroid.show(
-            "Password successfully changed!",
-            ToastAndroid.SHORT
-          );
+        if ((await hasHardwareAsync()) && (await isEnrolledAsync())) {
+          const { success } = await authenticateAsync({
+            promptMessage: "Biometric authentication required",
+          });
+          if (success) {
+            setSubmitting(true);
+            dispatch(
+              updateObjectAuth({
+                ...dataUser,
+                password: newPassword,
+              })
+            );
+            setSubmitting(false);
+            resetForm();
+            ToastAndroid.show(
+              "Password successfully changed!",
+              ToastAndroid.SHORT
+            );
+          }
         } else {
           Alert.alert(
             "Something Wrong",

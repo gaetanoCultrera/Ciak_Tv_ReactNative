@@ -4,7 +4,7 @@ import { RootState } from "../../../../store/store";
 
 export const useValidationSchemaLogin = () => {
   const { email, password } = useSelector(
-    ({ objectSignUp }: RootState) => objectSignUp.dataSignup
+    ({ userData }: RootState) => userData
   );
   const validationSchema = yup.object({
     email: yup

@@ -3,9 +3,7 @@ import { RootState } from "../../../../store/store";
 import * as yup from "yup";
 
 export const useValidationProfileSchema = () => {
-  const { password } = useSelector(
-    ({ objectSignUp }: RootState) => objectSignUp.dataSignup
-  );
+  const { password } = useSelector(({ userData }: RootState) => userData);
   const validationProfileSchema = yup.object({
     oldPassword: yup
       .string()

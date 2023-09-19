@@ -1,29 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { IFormAuth } from "../interfaces/IFormAuth";
+import { Store } from "../constans/Store";
 
-// Define a type for the slice state
-export interface ObjectSignupState {
-  dataSignup: IFormAuth;
-}
-
-export const IInitialState = {
+export const initialState: IFormAuth = {
   email: "",
   username: "",
   password: "",
+  uriProfileImg: "",
   isLogged: false,
 };
 
-const initialState: ObjectSignupState = {
-  dataSignup: IInitialState,
-};
-
 export const signupSlice = createSlice({
-  name: "objectSignUp",
+  name: Store.USERDATA,
   initialState,
   reducers: {
     updateObjectAuth: (_, { payload }: PayloadAction<IFormAuth>) => ({
-      dataSignup: { ...payload },
+      ...payload,
     }),
     resetState: () => initialState,
   },

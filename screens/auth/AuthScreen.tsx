@@ -3,9 +3,7 @@ import { RootState } from "../../store/store";
 import { Login, SignUp } from "../../components";
 
 export const AuthScreen = () => {
-  const { username } = useSelector(
-    ({ objectSignUp }: RootState) => objectSignUp.dataSignup
-  );
+  const { username } = useSelector(({ userData }: RootState) => userData);
 
   return username ? <Login /> : <SignUp />;
 };

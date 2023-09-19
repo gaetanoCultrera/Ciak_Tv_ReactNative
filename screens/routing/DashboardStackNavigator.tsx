@@ -12,9 +12,7 @@ import { RootState } from "../../store/store";
 
 const Tab = createBottomTabNavigator();
 export const DashboardStackNavigator = () => {
-  const { uriProfileImg } = useSelector(
-    ({ objectSignUp }: RootState) => objectSignUp.dataSignup
-  );
+  const { uriProfileImg } = useSelector(({ userData }: RootState) => userData);
   const { renderIcon, renderImage } = useRenderIcon();
   return (
     <Tab.Navigator
@@ -49,6 +47,7 @@ export const DashboardStackNavigator = () => {
         component={TheaterScreen}
         options={{
           tabBarIcon: () => renderIcon("theater"),
+          headerShown: false,
         }}
       />
       <Tab.Screen

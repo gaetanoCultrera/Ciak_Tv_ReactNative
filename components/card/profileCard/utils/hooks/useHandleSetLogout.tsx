@@ -2,15 +2,11 @@ import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../../../store/store";
 import { updateObjectAuth } from "../../../../../store/signupSlice";
-import { useHandleAsyncStorage } from "../../../../../screens/routing/utils/hooks/useHandleAsyncStorage";
 import { Alert } from "react-native";
 
 export const useHandleSetLogout = () => {
-  const dataUser = useSelector(
-    (state: RootState) => state.objectSignUp.dataSignup
-  );
+  const dataUser = useSelector(({ userData }: RootState) => userData);
   const dispatch = useDispatch();
-  const { setItem } = useHandleAsyncStorage();
 
   return useCallback(() => {
     try {
@@ -22,10 +18,6 @@ export const useHandleSetLogout = () => {
         {
           text: "Yes",
           onPress: () => {
-            void setItem(
-              "userData",
-              JSON.stringify({ ...dataUser, isLogged: false })
-            );
             dispatch(updateObjectAuth({ ...dataUser, isLogged: false }));
           },
         },
@@ -33,5 +25,5 @@ export const useHandleSetLogout = () => {
     } catch (error) {
       console.error(error);
     }
-  }, [dataUser, dispatch, setItem]);
+  }, [dataUser, dispatch]);
 };

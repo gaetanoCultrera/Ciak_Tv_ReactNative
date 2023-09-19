@@ -14,9 +14,7 @@ export const ProfileScreen = () => {
   const { renderIcon, renderImage } = useRenderIcon();
   const navigation = useNavigation();
   const isFocused = useIsFocused();
-  const { uriProfileImg } = useSelector(
-    ({ objectSignUp }: RootState) => objectSignUp.dataSignup
-  );
+  const { uriProfileImg } = useSelector(({ userData }: RootState) => userData);
 
   useEffect(() => {
     if (!isFocused) setShowCamera(false);

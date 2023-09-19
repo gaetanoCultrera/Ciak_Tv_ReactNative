@@ -9,7 +9,7 @@ import { ProfileImage } from "../../profileImage/ProfileImage";
 
 export const CardHeader: FC<IPropsProfileCamera> = memo(({ setShowCamera }) => {
   const { username, email, uriProfileImg } = useSelector(
-    ({ objectSignUp }: RootState) => objectSignUp.dataSignup
+    ({ userData }: RootState) => userData
   );
 
   return (
