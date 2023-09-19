@@ -4,18 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../../../../store/store";
 import { updateObjectAuth } from "../../../../../../store/signupSlice";
 import { FlashMode } from "expo-camera";
-import { useHandleAsyncStorage } from "../../../../../../screens/routing/utils/hooks/useHandleAsyncStorage";
 
 export const useHandleTakePicture = ({
   cameraRef,
   setFlashMode,
   flashMode,
 }: IPropsTakePicture) => {
-  const dataUser = useSelector(
-    ({ objectSignUp }: RootState) => objectSignUp.dataSignup
-  );
+  const dataUser = useSelector(({ userData }: RootState) => userData);
   const dispatch = useDispatch();
-  const { setItem } = useHandleAsyncStorage();
   const handleTakePicture = useCallback(async () => {
     if (cameraRef.current) {
       try {
@@ -23,13 +19,7 @@ export const useHandleTakePicture = ({
           quality: 0.5,
           base64: true,
         });
-        await setItem(
-          "userData",
-          JSON.stringify({
-            ...dataUser,
-            uriProfileImg: uri,
-          })
-        );
+
         dispatch(
           updateObjectAuth({
             ...dataUser,
@@ -41,7 +31,7 @@ export const useHandleTakePicture = ({
         console.error("Error:", error);
       }
     }
-  }, [cameraRef, dataUser, dispatch, setItem]);
+  }, [cameraRef, dataUser, dispatch]);
 
   const handleFlashMode = useCallback(() => {
     flashMode === FlashMode.off

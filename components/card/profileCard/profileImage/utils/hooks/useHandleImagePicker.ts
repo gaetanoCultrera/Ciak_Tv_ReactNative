@@ -6,9 +6,7 @@ import { RootState } from "../../../../../../store/store";
 import { useHandleAsyncStorage } from "../../../../../../screens/routing/utils/hooks/useHandleAsyncStorage";
 import { updateObjectAuth } from "../../../../../../store/signupSlice";
 export const useHandleImagePicker = () => {
-  const dataUser = useSelector(
-    ({ objectSignUp }: RootState) => objectSignUp.dataSignup
-  );
+  const dataUser = useSelector(({ userData }: RootState) => userData);
   const dispatch = useDispatch();
   const { setItem } = useHandleAsyncStorage();
   return useCallback(async () => {

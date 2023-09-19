@@ -10,9 +10,7 @@ import { AuthScreen } from "../auth/AuthScreen";
 const Stack = createNativeStackNavigator();
 
 export const HomeStackNavigator = () => {
-  const { isLogged } = useSelector(
-    ({ objectSignUp }: RootState) => objectSignUp.dataSignup
-  );
+  const { isLogged } = useSelector(({ userData }: RootState) => userData);
   // screenOptions={{headerRight:}}
   return (
     <Stack.Navigator>
