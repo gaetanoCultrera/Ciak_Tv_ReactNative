@@ -20,7 +20,6 @@ export const filmApi = createApi({
     getUpcomingMovies: builder.query<RootFilm, number>({
       query: (numberPage: number) => `/movie/upcoming?page=${numberPage}`,
     }),
-
     getTopRatedMovies: builder.query<RootFilm, number>({
       query: (numberPage: number) => `/movie/top_rated?page=${numberPage}`,
     }),

@@ -22,7 +22,7 @@ const rootReducer = combineReducers({
   favoriteItems: persistReducer(preferitePersistConfig, favoriteSlice),
   [filmApi.reducerPath]: filmApi.reducer,
 });
-//ho eliminato il preloadState per vedere se andava in conflitto e funziona
+
 export const setupStore = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
