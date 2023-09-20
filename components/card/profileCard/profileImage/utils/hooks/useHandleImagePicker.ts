@@ -3,12 +3,11 @@ import { Alert } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../../../../store/store";
-import { useHandleAsyncStorage } from "../../../../../../screens/routing/utils/hooks/useHandleAsyncStorage";
 import { updateObjectAuth } from "../../../../../../store/signupSlice";
 export const useHandleImagePicker = () => {
   const dataUser = useSelector(({ userData }: RootState) => userData);
   const dispatch = useDispatch();
-  const { setItem } = useHandleAsyncStorage();
+
   return useCallback(async () => {
     const { granted } = await ImagePicker.requestMediaLibraryPermissionsAsync();
     //custom crop per l'anteprima non al quadrato ma direttamente nel cerchio
@@ -21,13 +20,6 @@ export const useHandleImagePicker = () => {
         quality: 1,
       });
       if (!canceled) {
-        await setItem(
-          "userData",
-          JSON.stringify({
-            ...dataUser,
-            uriProfileImg: assets[0].uri,
-          })
-        );
         dispatch(
           updateObjectAuth({
             ...dataUser,
@@ -38,5 +30,5 @@ export const useHandleImagePicker = () => {
       return;
     }
     Alert.alert("Access denied");
-  }, [dataUser, dispatch, setItem]);
+  }, [dataUser, dispatch]);
 };
