@@ -1,7 +1,6 @@
 import React, { FC, useMemo } from "react";
 import { RenderPropsEmptyList } from "../../../../interfaces/IRenderProps";
-
-import { SpinnerLoading } from "../../../spinner/SpinnerLoading";
+import { StyleSheet, View } from "react-native";
 import { isFetchBaseQueryError } from "../Typeguard";
 import { TextContent } from "../../../text/TextContent";
 import { ICustomError } from "../../../../interfaces/ICustomErrors";
@@ -13,7 +12,12 @@ export const RenderEmptyList: FC<RenderPropsEmptyList> = ({
 }) => {
   const renderEmptyList = useMemo(() => {
     if (isLoading) {
-      return <SpinnerLoading testID="customSpinner" color={"red"} />;
+      return (
+        <View>
+          <View style={skeleton} />
+          <View style={skeleton} />
+        </View>
+      );
     }
     if (error) {
       if (isFetchBaseQueryError(error)) {
@@ -28,3 +32,12 @@ export const RenderEmptyList: FC<RenderPropsEmptyList> = ({
   }, [error, isLoading]);
   return renderEmptyList;
 };
+const { skeleton } = StyleSheet.create({
+  skeleton: {
+    width: 200,
+    height: 20,
+    backgroundColor: "#E0E0E0",
+    marginVertical: 10,
+    borderRadius: 4,
+  },
+});

@@ -6,6 +6,7 @@ import { DashboardCard } from "../card/dashboardCard/DashboardCard";
 import { RenderEmptyList } from "./utils/renderEmptyList/RenderEmptyList";
 import { Variant } from "../../constans/Variant";
 import { RenderTitle } from "./utils/renderTitle/RenderTitle";
+import { View } from "react-native-animatable";
 
 export const ListCards: FC<IPropsCard> = ({
   titleList,
@@ -18,6 +19,7 @@ export const ListCards: FC<IPropsCard> = ({
   isHorizontal,
   numColumn,
   typeList,
+  isFetching,
 }) => {
   const renderCurrentPagination = useMemo(
     () =>
@@ -32,7 +34,10 @@ export const ListCards: FC<IPropsCard> = ({
   return (
     // onEndReachedThreshold={0.5} legato alla distanza dal fondo
     <>
-      <RenderTitle dataLength={resultData?.length} title={titleList} />
+      <View style={{ margin: 10 }}>
+        <RenderTitle dataLength={resultData?.length} title={titleList} />
+      </View>
+
       <FlatList
         nestedScrollEnabled
         horizontal={isHorizontal}
@@ -45,13 +50,13 @@ export const ListCards: FC<IPropsCard> = ({
         //when touch the board
         onStartReachedThreshold={0}
         onStartReached={() =>
-          !isLoading && currentPage > 1
+          !isFetching && currentPage > 1
             ? setCurrentPage((prev) => prev - 1)
             : null
         }
         onEndReachedThreshold={0}
         onEndReached={() =>
-          !isLoading && currentPage < (totalPages as number)
+          !isFetching && currentPage < (totalPages as number)
             ? setCurrentPage((prev) => prev + 1)
             : null
         }

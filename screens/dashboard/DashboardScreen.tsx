@@ -7,7 +7,6 @@ import {
 } from "../../services/film";
 import { ListCards } from "../../components";
 import { BannerCard } from "../../components/card/bannerCard/BannerCard";
-import { SplashScreen } from "../../components/splashScreen/SplashScreen";
 import { useSetOnRefresh } from "./utils/hooks/useSetOnRefresh";
 
 export const DashboardScreen = () => {
@@ -21,12 +20,14 @@ export const DashboardScreen = () => {
     data: { results: resultsUpComing, total_pages: totalPagesUpComing } = {},
     error: errorUpComing,
     isLoading: isLoadingUpComing,
+    isFetching: isFetchingUpComing,
   } = useGetUpcomingMoviesQuery(currentPageUpComing);
 
   const {
     data: { results: resultsTopRated, total_pages: totalPagesTopRated } = {},
     error: errorTopRated,
     isLoading: isLoadingTopRated,
+    isFetching: isFetchingTopRated,
   } = useGetTopRatedMoviesQuery(currentPageTopRated);
 
   const {
@@ -36,61 +37,55 @@ export const DashboardScreen = () => {
     } = {},
     error: errorPopularMovies,
     isLoading: isLoadingPopularMovies,
+    isFetching: isFetchingPopularMovies,
   } = useGetPopularMovieQuery(currentPagePopularMovie);
 
   return (
-    <>
-      <SplashScreen
-        isLoading={[
-          isLoadingPopularMovies,
-          isLoadingTopRated,
-          isLoadingUpComing,
-        ]}
-      >
-        <ScrollView
-          refreshControl={
-            <RefreshControl
-              refreshing={
-                isLoadingUpComing || isLoadingPopularMovies || isLoadingTopRated
-              }
-              onRefresh={onRefresh}
-              progressBackgroundColor={"white"}
-            />
+    <ScrollView
+      refreshControl={
+        <RefreshControl
+          refreshing={
+            isLoadingUpComing || isLoadingPopularMovies || isLoadingTopRated
           }
-        >
-          <BannerCard />
-          <ListCards
-            resultData={resultsUpComing}
-            titleList={"UpComing"}
-            currentPage={currentPageUpComing}
-            setCurrentPage={setCurrentPageUpComing}
-            isLoading={isLoadingUpComing}
-            totalPages={totalPagesUpComing}
-            error={errorUpComing}
-            isHorizontal={true}
-          />
-          <ListCards
-            resultData={resultsTopRated}
-            titleList={"TopRated"}
-            currentPage={currentPageTopRated}
-            setCurrentPage={setCurrentTopRated}
-            isLoading={isLoadingTopRated}
-            totalPages={totalPagesTopRated}
-            error={errorTopRated}
-            isHorizontal={true}
-          />
-          <ListCards
-            resultData={resultsPopularMovies}
-            titleList={"Popular Movies"}
-            currentPage={currentPagePopularMovie}
-            setCurrentPage={setCurrentPagePopularMovie}
-            isLoading={isLoadingPopularMovies}
-            totalPages={totalPagesPopularMovies}
-            error={errorPopularMovies}
-            isHorizontal={true}
-          />
-        </ScrollView>
-      </SplashScreen>
-    </>
+          onRefresh={onRefresh}
+          progressBackgroundColor={"white"}
+        />
+      }
+    >
+      <BannerCard />
+      <ListCards
+        resultData={resultsUpComing}
+        titleList={"UpComing"}
+        currentPage={currentPageUpComing}
+        setCurrentPage={setCurrentPageUpComing}
+        isLoading={isLoadingUpComing}
+        totalPages={totalPagesUpComing}
+        error={errorUpComing}
+        isHorizontal={true}
+        isFetching={isFetchingUpComing}
+      />
+      <ListCards
+        resultData={resultsTopRated}
+        titleList={"TopRated"}
+        currentPage={currentPageTopRated}
+        setCurrentPage={setCurrentTopRated}
+        isLoading={isLoadingTopRated}
+        totalPages={totalPagesTopRated}
+        error={errorTopRated}
+        isHorizontal={true}
+        isFetching={isFetchingTopRated}
+      />
+      <ListCards
+        resultData={resultsPopularMovies}
+        titleList={"Popular Movies"}
+        currentPage={currentPagePopularMovie}
+        setCurrentPage={setCurrentPagePopularMovie}
+        isLoading={isLoadingPopularMovies}
+        totalPages={totalPagesPopularMovies}
+        error={errorPopularMovies}
+        isHorizontal={true}
+        isFetching={isFetchingPopularMovies}
+      />
+    </ScrollView>
   );
 };
