@@ -1,5 +1,4 @@
 export interface RootFilm {
-  dates: Dates;
   page: number;
   results: CustomDataCard[];
   total_pages: number;

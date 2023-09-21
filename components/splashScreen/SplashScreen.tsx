@@ -4,6 +4,7 @@ import data from "../../assets/animation/ciak.json";
 import LottieView from "lottie-react-native";
 import { useNavigation } from "@react-navigation/native";
 
+//COMPONENTE NON UTILIZZATO MA UTILE
 export const SplashScreen: FC<IPropsSplashScreen> = ({
   children,
   isLoading,

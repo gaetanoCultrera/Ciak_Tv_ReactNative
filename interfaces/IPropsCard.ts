@@ -14,6 +14,7 @@ export interface IPropsCard {
   error?: unknown;
   isHorizontal: boolean;
   numColumn?: number;
+  isFetching: boolean;
   typeList?: TypeList;
 }
 

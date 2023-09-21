@@ -9,6 +9,6 @@ export const securePersistConfig = {
 };
 
 export const preferitePersistConfig = {
-  key: Store.PREFERITE,
+  key: Store.FAVORITE,
   storage: ExpoFileSystemStorage,
 };
