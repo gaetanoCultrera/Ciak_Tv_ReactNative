@@ -1,6 +1,8 @@
+import { TypeList } from "../constans/TypeList";
 export interface RenderPropsEmptyList {
   isLoading?: boolean;
   error: unknown;
+  typedList?: TypeList;
 }
 
 export interface RenderPropsTitle {

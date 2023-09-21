@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native";
 import { containerSearch } from "./style";
 import { useNavigation } from "@react-navigation/native";
 import { useRenderInputText } from "./utils/hooks/useRenderInputText";
+import { TypeList } from "../../constans/TypeList";
 
 export const SearchScreen = () => {
   const navigation = useNavigation();
@@ -14,6 +15,7 @@ export const SearchScreen = () => {
     data: { results, total_pages } = {},
     error,
     isLoading,
+    isFetching,
   } = useGetFilmBySearchQuery({
     queryString: queryString,
     pageNumber: currentPage,
@@ -38,6 +40,8 @@ export const SearchScreen = () => {
         error={error}
         isHorizontal={false}
         numColumn={2}
+        isFetching={isFetching}
+        typeList={TypeList.FAVORITE}
       />
     </SafeAreaView>
   );

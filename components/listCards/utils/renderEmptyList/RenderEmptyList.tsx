@@ -1,22 +1,24 @@
 import React, { FC, useMemo } from "react";
 import { RenderPropsEmptyList } from "../../../../interfaces/IRenderProps";
-import { StyleSheet, View } from "react-native";
 import { isFetchBaseQueryError } from "../Typeguard";
 import { TextContent } from "../../../text/TextContent";
 import { ICustomError } from "../../../../interfaces/ICustomErrors";
 import { Variant } from "../../../../constans/Variant";
+import { View } from "react-native-animatable";
+import { loadingCardsArray } from "./common/loadingCardArray";
+import { directionRowLoadingCard, directionColumnLoadingCard } from "./style";
 
 export const RenderEmptyList: FC<RenderPropsEmptyList> = ({
   isLoading,
   error,
+  typedList,
 }) => {
   const renderEmptyList = useMemo(() => {
     if (isLoading) {
-      return (
-        <View>
-          <View style={skeleton} />
-          <View style={skeleton} />
-        </View>
+      return !typedList ? (
+        <View style={directionRowLoadingCard}>{loadingCardsArray(3)}</View>
+      ) : (
+        <View style={directionColumnLoadingCard}>{loadingCardsArray(1)}</View>
       );
     }
     if (error) {
@@ -29,15 +31,6 @@ export const RenderEmptyList: FC<RenderPropsEmptyList> = ({
         );
       }
     }
-  }, [error, isLoading]);
+  }, [error, isLoading, typedList]);
   return renderEmptyList;
 };
-const { skeleton } = StyleSheet.create({
-  skeleton: {
-    width: 200,
-    height: 20,
-    backgroundColor: "#E0E0E0",
-    marginVertical: 10,
-    borderRadius: 4,
-  },
-});
