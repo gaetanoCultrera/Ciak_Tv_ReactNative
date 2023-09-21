@@ -43,17 +43,16 @@ export const ListCards: FC<IPropsCard> = ({
         horizontal={isHorizontal}
         numColumns={(numColumn as number) ?? null}
         ListEmptyComponent={
-          <RenderEmptyList isLoading={isLoading} error={error} />
+          <RenderEmptyList
+            isLoading={isLoading}
+            error={error}
+            typedList={typeList}
+          />
         }
         ListFooterComponent={() => renderCurrentPagination}
         data={resultData}
         //when touch the board
-        onStartReachedThreshold={0}
-        onStartReached={() =>
-          !isFetching && currentPage > 1
-            ? setCurrentPage((prev) => prev - 1)
-            : null
-        }
+
         onEndReachedThreshold={0}
         onEndReached={() =>
           !isFetching && currentPage < (totalPages as number)
