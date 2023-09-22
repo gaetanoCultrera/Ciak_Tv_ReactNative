@@ -6,6 +6,7 @@ import { RootState } from "../../store/store";
 import { IDetailsId } from "../../interfaces/IDetailsProps";
 import { DetailsBanner } from "../../components/card/detailsBanner/DetailsBanner";
 import { RenderEmptyList } from "../../components/listCards/utils/renderEmptyList/RenderEmptyList";
+import { TypeList } from "../../constans/TypeList";
 
 export const DetailsScreen = () => {
   const { params } = useRoute();
@@ -31,6 +32,10 @@ export const DetailsScreen = () => {
       videos={data.videos}
     />
   ) : (
-    <RenderEmptyList isLoading={isLoading} error={error} />
+    <RenderEmptyList
+      isLoading={isLoading}
+      error={error}
+      typedList={TypeList.FAVORITE}
+    />
   );
 };
