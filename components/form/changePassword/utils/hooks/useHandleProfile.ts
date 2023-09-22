@@ -10,7 +10,7 @@ import { authenticateAsync } from "expo-local-authentication";
 export const useHandleProfile = () => {
   const dataUser = useSelector(({ userData }: RootState) => userData);
   const dispatch = useDispatch();
-  //TODO aggiungere controllo di controllo hardware dispositivo
+
   return useCallback(
     async (
       { newPassword }: Pick<IFormProfile, "newPassword">,
