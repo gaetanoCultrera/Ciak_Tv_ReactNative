@@ -5,7 +5,7 @@ import { TextContent } from "../../../text/TextContent";
 import { ICustomError } from "../../../../interfaces/ICustomErrors";
 import { Variant } from "../../../../constans/Variant";
 import { View } from "react-native-animatable";
-import { loadingCardsArray } from "./common/loadingCardArray";
+import { LoadingCardsArray } from "./utils/loadingCardsArray/LoadingCardArray";
 import { directionRowLoadingCard, directionColumnLoadingCard } from "./style";
 
 export const RenderEmptyList: FC<RenderPropsEmptyList> = ({
@@ -16,9 +16,13 @@ export const RenderEmptyList: FC<RenderPropsEmptyList> = ({
   const renderEmptyList = useMemo(() => {
     if (isLoading) {
       return !typedList ? (
-        <View style={directionRowLoadingCard}>{loadingCardsArray(3)}</View>
+        <View style={directionRowLoadingCard}>
+          <LoadingCardsArray length={3} />
+        </View>
       ) : (
-        <View style={directionColumnLoadingCard}>{loadingCardsArray(1)}</View>
+        <View style={directionColumnLoadingCard}>
+          <LoadingCardsArray length={1} />
+        </View>
       );
     }
     if (error) {
