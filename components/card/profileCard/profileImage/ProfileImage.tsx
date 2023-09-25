@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { TouchableOpacity, View } from "react-native";
 import { useHandleOptionCamera } from "./utils/hooks/useHandleOptionCamera";
-import { IPropsProfileCamera } from "../../../../interfaces/IPropsProfileCamera";
+import { IPropsProfileCamera } from "../../../../interfaces/index";
 import { AvatarImage } from "../../../icon/AvatarImage";
 import { AvatarIcon } from "../../../icon/AvatarIcon";
 import { containerBadge } from "../../../icon/style";

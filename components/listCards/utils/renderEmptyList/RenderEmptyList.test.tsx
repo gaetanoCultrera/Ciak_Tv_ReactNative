@@ -1,5 +1,5 @@
 import React from "react";
-import { RenderPropsEmptyList } from "../../../../interfaces/IRenderProps";
+import { RenderPropsEmptyList } from "../../../../interfaces/index";
 import { render } from "@testing-library/react-native";
 import { RenderEmptyList } from "./RenderEmptyList";
 

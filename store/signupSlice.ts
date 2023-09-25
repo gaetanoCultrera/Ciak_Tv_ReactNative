@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { IFormAuth } from "../interfaces/IFormAuth";
+import { IFormAuth } from "../interfaces/index";
 import { Store } from "../constans/Store";
 
 export const initialState: IFormAuth = {

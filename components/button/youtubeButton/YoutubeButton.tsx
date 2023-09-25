@@ -1,6 +1,6 @@
 import React, { FC, memo } from "react";
 import { IconButton } from "react-native-paper";
-import { IPropsRenderYoutubeButton } from "../../../interfaces/IPropsRenderGenres";
+import { IPropsRenderYoutubeButton } from "../../../interfaces/index";
 
 export const YoutubeButton: FC<IPropsRenderYoutubeButton> = memo(
   ({ handleApp }) => {

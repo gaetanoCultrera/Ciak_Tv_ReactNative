@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
 import { SpinnerLoading } from "./SpinnerLoading";
-import { IPropsSpinner } from "../../interfaces/IPropsSpinner";
+import { IPropsSpinner } from "../../interfaces/index";
 
 const renderComponent = ({ color }: IPropsSpinner) =>
   render(<SpinnerLoading color={color} />);

@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { IPropsTypeCamera } from "../../../../../../interfaces/IPropsProfileCamera";
+import { IPropsTypeCamera } from "../../../../../../interfaces/index";
 import { CameraType } from "expo-camera";
 
 export const useHandleCameraType = ({ setType }: IPropsTypeCamera) => {

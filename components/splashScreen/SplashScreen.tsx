@@ -1,5 +1,5 @@
 import React, { FC, useMemo, useEffect } from "react";
-import { IPropsSplashScreen } from "../../interfaces/IPropsSplashScreen";
+import { IPropsSplashScreen } from "../../interfaces/index";
 import data from "../../assets/animation/ciak.json";
 import LottieView from "lottie-react-native";
 import { useNavigation } from "@react-navigation/native";

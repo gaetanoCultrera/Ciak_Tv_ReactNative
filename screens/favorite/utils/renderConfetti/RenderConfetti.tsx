@@ -1,6 +1,6 @@
 import React, { FC, useMemo } from "react";
 import { View } from "react-native";
-import { RenderPropsConfetti } from "../../../../interfaces/IRenderProps";
+import { RenderPropsConfetti } from "../../../../interfaces/index";
 import ConfettiCannon from "react-native-confetti-cannon";
 import { containerConfetti } from "../../style";
 

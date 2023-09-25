@@ -5,7 +5,7 @@ import {
   addDataListFavorite,
   removeDataListFavorite,
 } from "../../../../../store/favoriteSlice";
-import { IPropsDetailsBanner } from "../../../../../interfaces/IPropsCard";
+import { IPropsDetailsBanner } from "../../../../../interfaces/index";
 
 export const useHandleFavorite = (props: IPropsDetailsBanner) => {
   const dataFavoriteList = useSelector(

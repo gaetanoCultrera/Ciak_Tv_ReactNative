@@ -2,7 +2,7 @@ import React, { FC, memo } from "react";
 import { Card } from "react-native-paper";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../../../store/store";
-import { IPropsProfileCamera } from "../../../../../interfaces/IPropsProfileCamera";
+import { IPropsProfileCamera } from "../../../../../interfaces/index";
 import { TextContent } from "../../../../text/TextContent";
 import { Variant } from "../../../../../constans/Variant";
 import { ProfileImage } from "../../profileImage/ProfileImage";

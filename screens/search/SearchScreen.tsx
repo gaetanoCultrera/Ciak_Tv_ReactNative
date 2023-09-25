@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useGetFilmBySearchQuery } from "../../services/film";
-import { ListCards } from "../../components/listCards/ListCards";
+import { ListCards } from "../../components";
 import { SafeAreaView } from "react-native";
 import { containerSearch } from "./style";
 import { useNavigation } from "@react-navigation/native";

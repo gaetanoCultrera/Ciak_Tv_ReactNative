@@ -1,5 +1,5 @@
 import React, { FC, memo, useEffect } from "react";
-import { IPropsDetailsBanner } from "../../../interfaces/IPropsCard";
+import { IPropsDetailsBanner } from "../../../interfaces/index";
 import { View } from "react-native";
 import { Card, IconButton } from "react-native-paper";
 import { cardTitle, containerCardTitle } from "../dashboardCard/style";

@@ -1,8 +1,10 @@
 import React, { FC, useMemo } from "react";
-import { RenderPropsEmptyList } from "../../../../interfaces/IRenderProps";
+import {
+  RenderPropsEmptyList,
+  ICustomError,
+} from "../../../../interfaces/index";
 import { isFetchBaseQueryError } from "../Typeguard";
 import { TextContent } from "../../../text/TextContent";
-import { ICustomError } from "../../../../interfaces/ICustomErrors";
 import { Variant } from "../../../../constans/Variant";
 import { View } from "react-native-animatable";
 import { LoadingCardsArray } from "./utils/loadingCardsArray/LoadingCardArray";

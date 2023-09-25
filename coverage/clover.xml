@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1695371875632" clover="3.2.0">
-  <project timestamp="1695371875632" name="All files">
-    <metrics statements="840" coveredstatements="126" conditionals="443" coveredconditionals="9" methods="235" coveredmethods="26" elements="1518" coveredelements="161" complexity="0" loc="840" ncloc="840" packages="52" files="79" classes="79"/>
+<coverage generated="1695372844183" clover="3.2.0">
+  <project timestamp="1695372844183" name="All files">
+    <metrics statements="839" coveredstatements="101" conditionals="432" coveredconditionals="10" methods="245" coveredmethods="20" elements="1516" coveredelements="131" complexity="0" loc="839" ncloc="839" packages="57" files="85" classes="85"/>
     <package name="Ciak__Tv">
-      <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="18" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
       <file name=".eslintrc.js" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\.eslintrc.js">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
       <file name="App.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\App.tsx">
-        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
       </file>
       <file name="babel.config.js" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\babel.config.js">
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -149,30 +156,25 @@
       </file>
     </package>
     <package name="Ciak__Tv.components.card.detailsBanner.utils.hooks">
-      <metrics statements="40" coveredstatements="8" conditionals="1" coveredconditionals="0" methods="11" coveredmethods="3"/>
+      <metrics statements="35" coveredstatements="8" conditionals="1" coveredconditionals="0" methods="10" coveredmethods="3"/>
       <file name="useHandleFavorite.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\card\detailsBanner\utils\hooks\useHandleFavorite.ts">
-        <metrics statements="21" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <metrics statements="16" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="22" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="22" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
       </file>
       <file name="useRenderGenres.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\card\detailsBanner\utils\hooks\useRenderGenres.tsx">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
@@ -198,6 +200,24 @@
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="Ciak__Tv.components.card.loadingCard">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="LoadingCard.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\card\loadingCard\LoadingCard.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+      </file>
+      <file name="style.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\card\loadingCard\style.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
       </file>
     </package>
     <package name="Ciak__Tv.components.card.profileCard">
@@ -244,7 +264,7 @@
       </file>
     </package>
     <package name="Ciak__Tv.components.card.profileCard.profileCamera.utils.hooks">
-      <metrics statements="38" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="13" coveredmethods="0"/>
+      <metrics statements="34" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="13" coveredmethods="0"/>
       <file name="useHandleCameraType.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\card\profileCard\profileCamera\utils\hooks\useHandleCameraType.ts">
         <metrics statements="6" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
@@ -269,28 +289,24 @@
         <line num="26" count="0" type="stmt"/>
       </file>
       <file name="useHandleTakePicture.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\card\profileCard\profileCamera\utils\hooks\useHandleTakePicture.ts">
-        <metrics statements="21" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <metrics statements="17" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="17" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
-        <line num="47" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="52" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="42" count="0" type="stmt"/>
       </file>
     </package>
     <package name="Ciak__Tv.components.card.profileCard.profileImage">
@@ -311,9 +327,9 @@
       </file>
     </package>
     <package name="Ciak__Tv.components.card.profileCard.profileImage.utils.hooks">
-      <metrics statements="33" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <metrics statements="29" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="6" coveredmethods="0"/>
       <file name="useHandleImagePicker.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\card\profileCard\profileImage\utils\hooks\useHandleImagePicker.ts">
-        <metrics statements="20" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <metrics statements="16" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -322,18 +338,14 @@
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="15" count="0" type="stmt"/>
-        <line num="17" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="25" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
       </file>
       <file name="useHandleOptionCamera.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\card\profileCard\profileImage\utils\hooks\useHandleOptionCamera.tsx">
         <metrics statements="13" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="3" coveredmethods="0"/>
@@ -386,25 +398,39 @@
       </file>
     </package>
     <package name="Ciak__Tv.components.card.profileCard.utils.hooks">
-      <metrics statements="16" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <metrics statements="27" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="useHandleSetDeleteAccount.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\card\profileCard\utils\hooks\useHandleSetDeleteAccount.tsx">
+        <metrics statements="15" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+      </file>
       <file name="useHandleSetLogout.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\card\profileCard\utils\hooks\useHandleSetLogout.tsx">
-        <metrics statements="16" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <metrics statements="12" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
       </file>
     </package>
     <package name="Ciak__Tv.components.form">
@@ -439,17 +465,44 @@
         <line num="117" count="0" type="stmt"/>
       </file>
     </package>
+    <package name="Ciak__Tv.components.form.changePassword.utils.hooks">
+      <metrics statements="22" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="useHandleProfile.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\form\changePassword\utils\hooks\useHandleProfile.ts">
+        <metrics statements="22" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+      </file>
+    </package>
     <package name="Ciak__Tv.components.form.changePassword.validation">
-      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="useValidationSchema.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\form\changePassword\validation\useValidationSchema.ts">
-        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
+        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
       </file>
     </package>
     <package name="Ciak__Tv.components.form.login">
@@ -473,77 +526,33 @@
       </file>
     </package>
     <package name="Ciak__Tv.components.form.login.utils.hook">
-      <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="useHandleLogin.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\form\login\utils\hook\useHandleLogin.ts">
-        <metrics statements="14" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
       </file>
     </package>
     <package name="Ciak__Tv.components.form.login.validation">
-      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="useValidationSchema.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\form\login\validation\useValidationSchema.ts">
-        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="Ciak__Tv.components.form.signUp">
-      <metrics statements="16" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="6" coveredmethods="0"/>
-      <file name="SignUp.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\form\signUp\SignUp.tsx">
-        <metrics statements="16" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="86" count="0" type="stmt"/>
-        <line num="108" count="0" type="stmt"/>
-        <line num="124" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="Ciak__Tv.components.form.signUp.utils.hook">
-      <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="useHandleSignUp.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\form\signUp\utils\hook\useHandleSignUp.ts">
-        <metrics statements="13" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
       </file>
     </package>
     <package name="Ciak__Tv.components.form.signUp.validation">
@@ -577,9 +586,9 @@
       </file>
     </package>
     <package name="Ciak__Tv.components.listCards">
-      <metrics statements="18" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="9" coveredmethods="0"/>
+      <metrics statements="17" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="7" coveredmethods="0"/>
       <file name="ListCards.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\listCards\ListCards.tsx">
-        <metrics statements="18" coveredstatements="0" conditionals="14" coveredconditionals="0" methods="9" coveredmethods="0"/>
+        <metrics statements="17" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="7" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -587,17 +596,16 @@
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="48" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="54" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="55" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="58" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="59" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
       </file>
     </package>
     <package name="Ciak__Tv.components.listCards.utils">
@@ -609,22 +617,39 @@
       </file>
     </package>
     <package name="Ciak__Tv.components.listCards.utils.renderEmptyList">
-      <metrics statements="13" coveredstatements="13" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <metrics statements="17" coveredstatements="17" conditionals="5" coveredconditionals="4" methods="2" coveredmethods="2"/>
       <file name="RenderEmptyList.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\listCards\utils\renderEmptyList\RenderEmptyList.tsx">
-        <metrics statements="13" coveredstatements="13" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <metrics statements="15" coveredstatements="15" conditionals="5" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="15" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="18" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="19" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="29" count="2" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="28" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="29" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+      </file>
+      <file name="style.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\listCards\utils\renderEmptyList\style.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="Ciak__Tv.components.listCards.utils.renderEmptyList.utils.loadingCardsArray">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="LoadingCardArray.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\listCards\utils\renderEmptyList\utils\loadingCardsArray\LoadingCardArray.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
       </file>
     </package>
     <package name="Ciak__Tv.components.listCards.utils.renderTitle">
@@ -638,6 +663,27 @@
         <line num="8" count="2" type="stmt"/>
         <line num="10" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="15" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="Ciak__Tv.components.maps">
+      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="TheaterMaps.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\maps\TheaterMaps.tsx">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="Ciak__Tv.components.maps.utils.renderMaps">
+      <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="RenderMaps.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\components\maps\utils\renderMaps\RenderMaps.tsx">
+        <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
       </file>
     </package>
     <package name="Ciak__Tv.components.searchTextField">
@@ -661,7 +707,7 @@
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
       </file>
     </package>
     <package name="Ciak__Tv.components.splashScreen">
@@ -672,15 +718,15 @@
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="17" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
       </file>
     </package>
     <package name="Ciak__Tv.components.text">
@@ -694,7 +740,7 @@
       </file>
     </package>
     <package name="Ciak__Tv.constans">
-      <metrics statements="22" coveredstatements="4" conditionals="8" coveredconditionals="2" methods="4" coveredmethods="1"/>
+      <metrics statements="26" coveredstatements="4" conditionals="10" coveredconditionals="2" methods="5" coveredmethods="1"/>
       <file name="Icon.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\constans\Icon.ts">
         <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -715,6 +761,13 @@
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
+      </file>
+      <file name="Store.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\constans\Store.ts">
+        <metrics statements="4" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
       </file>
       <file name="TypeList.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\constans\TypeList.ts">
         <metrics statements="3" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -873,37 +926,35 @@
       </file>
     </package>
     <package name="Ciak__Tv.screens.auth">
-      <metrics statements="6" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="AuthScreen.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\auth\AuthScreen.tsx">
-        <metrics statements="6" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
       </file>
     </package>
     <package name="Ciak__Tv.screens.dashboard">
-      <metrics statements="18" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="17" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="DashboardScreen.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\dashboard\DashboardScreen.tsx">
-        <metrics statements="16" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="15" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
         <line num="41" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
       </file>
       <file name="style.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\dashboard\style.ts">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -925,47 +976,27 @@
       </file>
     </package>
     <package name="Ciak__Tv.screens.details">
-      <metrics statements="13" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <metrics statements="14" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="DetailsScreen.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\details\DetailsScreen.tsx">
-        <metrics statements="13" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <metrics statements="14" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
-        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
       </file>
     </package>
     <package name="Ciak__Tv.screens.favorite">
-      <metrics statements="20" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="FavoriteScreen.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\favorite\FavoriteScreen.tsx">
-        <metrics statements="18" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-      </file>
+      <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="style.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\favorite\style.ts">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
@@ -989,9 +1020,9 @@
       </file>
     </package>
     <package name="Ciak__Tv.screens.profile">
-      <metrics statements="25" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <metrics statements="24" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="6" coveredmethods="0"/>
       <file name="ProfileScreen.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\profile\ProfileScreen.tsx">
-        <metrics statements="25" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <metrics statements="24" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1007,22 +1038,21 @@
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="45" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
       </file>
     </package>
     <package name="Ciak__Tv.screens.routing">
-      <metrics statements="50" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="13" coveredmethods="0"/>
+      <metrics statements="37" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="10" coveredmethods="0"/>
       <file name="DashboardStackNavigator.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\routing\DashboardStackNavigator.tsx">
-        <metrics statements="21" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="0"/>
+        <metrics statements="20" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1037,16 +1067,15 @@
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="59" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="58" count="0" type="cond" truecount="0" falsecount="2"/>
       </file>
       <file name="HomeStackNavigator.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\routing\HomeStackNavigator.tsx">
-        <metrics statements="12" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <metrics statements="11" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1057,66 +1086,20 @@
         <line num="10" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
       </file>
       <file name="RootNavigator.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\routing\RootNavigator.tsx">
-        <metrics statements="17" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
       </file>
     </package>
     <package name="Ciak__Tv.screens.routing.utils.hooks">
-      <metrics statements="37" coveredstatements="8" conditionals="3" coveredconditionals="0" methods="7" coveredmethods="2"/>
-      <file name="useCheckFavoriteData.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\routing\utils\hooks\useCheckFavoriteData.ts">
-        <metrics statements="15" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="17" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-      </file>
-      <file name="useCheckUserData.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\routing\utils\hooks\useCheckUserData.ts">
-        <metrics statements="13" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-      </file>
+      <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
       <file name="useRenderIcon.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\routing\utils\hooks\useRenderIcon.tsx">
         <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
@@ -1131,9 +1114,9 @@
       </file>
     </package>
     <package name="Ciak__Tv.screens.search">
-      <metrics statements="19" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <metrics statements="20" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="SearchScreen.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\search\SearchScreen.tsx">
-        <metrics statements="17" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <metrics statements="18" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1141,16 +1124,17 @@
         <line num="5" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
       </file>
       <file name="style.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\search\style.ts">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -1170,69 +1154,117 @@
       </file>
     </package>
     <package name="Ciak__Tv.screens.theater">
-      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="TheaterScreen.tsx" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\theater\TheaterScreen.tsx">
-        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="Ciak__Tv.screens.theater.utils.hooks">
+      <metrics statements="13" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="useHandleCoords.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\screens\theater\utils\hooks\useHandleCoords.ts">
+        <metrics statements="13" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
       </file>
     </package>
     <package name="Ciak__Tv.services">
-      <metrics statements="10" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="1"/>
+      <metrics statements="22" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="19" coveredmethods="0"/>
       <file name="film.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\services\film.ts">
-        <metrics statements="10" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
+        <metrics statements="22" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="19" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
-        <line num="38" count="2" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="97" count="0" type="stmt"/>
       </file>
     </package>
     <package name="Ciak__Tv.store">
-      <metrics statements="28" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="4"/>
+      <metrics statements="27" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
       <file name="favoriteSlice.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\store\favoriteSlice.ts">
-        <metrics statements="9" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
+        <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
         <line num="51" count="0" type="stmt"/>
-        <line num="55" count="2" type="stmt"/>
-        <line num="62" count="2" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
       </file>
       <file name="signupSlice.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\store\signupSlice.ts">
-        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="21" count="3" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="32" count="3" type="stmt"/>
-        <line num="34" count="3" type="stmt"/>
+        <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
       </file>
       <file name="store.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\store\store.ts">
-        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="18" count="6" type="stmt"/>
-        <line num="22" count="6" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
+        <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="Ciak__Tv.store.utils.common">
+      <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="persistsConfig.ts" path="C:\Users\gvg74\Desktop\React-native\Ciak_Tv_React_Native\Ciak__Tv\store\utils\common\persistsConfig.ts">
+        <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
       </file>
     </package>
   </project>

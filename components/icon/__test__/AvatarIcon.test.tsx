@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
 import { AvatarIcon } from "../AvatarIcon";
-import { IPropIcon } from "../../../interfaces/IPropsCard";
+import { IPropIcon } from "../../../interfaces/index";
 
 const renderComponent = ({ nameIcon }: IPropIcon) =>
   render(<AvatarIcon nameIcon={nameIcon} />);

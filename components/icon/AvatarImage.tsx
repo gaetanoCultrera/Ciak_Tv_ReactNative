@@ -1,5 +1,5 @@
 import React, { FC, memo } from "react";
-import { IPropProfileImage } from "../../interfaces/IPropsCard";
+import { IPropProfileImage } from "../../interfaces/index";
 import { Avatar } from "react-native-paper";
 
 export const AvatarImage: FC<IPropProfileImage> = memo(

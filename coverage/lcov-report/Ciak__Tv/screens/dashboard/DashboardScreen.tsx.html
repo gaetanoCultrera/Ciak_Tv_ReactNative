@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/17</span>
+                <span class='fraction'>0/16</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/16</span>
+                <span class='fraction'>0/15</span>
             </div>
         
             
@@ -154,19 +154,13 @@
 <a name='L89'></a><a href='#L89'>89</a>
 <a name='L90'></a><a href='#L90'>90</a>
 <a name='L91'></a><a href='#L91'>91</a>
-<a name='L92'></a><a href='#L92'>92</a>
-<a name='L93'></a><a href='#L93'>93</a>
-<a name='L94'></a><a href='#L94'>94</a>
-<a name='L95'></a><a href='#L95'>95</a>
-<a name='L96'></a><a href='#L96'>96</a>
-<a name='L97'></a><a href='#L97'>97</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L92'></a><a href='#L92'>92</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -182,11 +176,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -194,10 +183,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -207,6 +192,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -264,7 +254,6 @@
 } from "../../services/film";
 <span class="cstat-no" title="statement not covered" >import { ListCards } from "../../components";</span>
 <span class="cstat-no" title="statement not covered" >import { BannerCard } from "../../components/card/bannerCard/BannerCard";</span>
-<span class="cstat-no" title="statement not covered" >import { SplashScreen } from "../../components/splashScreen/SplashScreen";</span>
 <span class="cstat-no" title="statement not covered" >import { useSetOnRefresh } from "./utils/hooks/useSetOnRefresh";</span>
 &nbsp;
 export const <span class="cstat-no" title="statement not covered" >DashboardScreen = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span>) =</span>&gt; {</span>
@@ -278,12 +267,14 @@ export const <span class="cstat-no" title="statement not covered" >DashboardScre
     data: { results: resultsUpComing, total_pages: totalPagesUpComing } = <span class="branch-0 cbranch-no" title="branch not covered" >{},</span>
     error: errorUpComing,
     isLoading: isLoadingUpComing,
+    isFetching: isFetchingUpComing,
   } = <span class="cstat-no" title="statement not covered" >useGetUpcomingMoviesQuery(currentPageUpComing);</span>
 &nbsp;
   const {
     data: { results: resultsTopRated, total_pages: totalPagesTopRated } = <span class="branch-0 cbranch-no" title="branch not covered" >{},</span>
     error: errorTopRated,
     isLoading: isLoadingTopRated,
+    isFetching: isFetchingTopRated,
   } = <span class="cstat-no" title="statement not covered" >useGetTopRatedMoviesQuery(currentPageTopRated);</span>
 &nbsp;
   const {
@@ -293,62 +284,56 @@ export const <span class="cstat-no" title="statement not covered" >DashboardScre
     } = <span class="branch-0 cbranch-no" title="branch not covered" >{},</span>
     error: errorPopularMovies,
     isLoading: isLoadingPopularMovies,
+    isFetching: isFetchingPopularMovies,
   } = <span class="cstat-no" title="statement not covered" >useGetPopularMovieQuery(currentPagePopularMovie);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  return (</span>
-    &lt;&gt;
-      &lt;SplashScreen
-        isLoading={[
-          isLoadingPopularMovies,
-          isLoadingTopRated,
-          isLoadingUpComing,
-        ]}
-      &gt;
-        &lt;ScrollView
-          refreshControl={
-            &lt;RefreshControl
-              refreshing={
-                isLoadingUpComing || isLoadingPopularMovies || isLoadingTopRated
-              }
-              onRefresh={onRefresh}
-              progressBackgroundColor={"white"}
-            /&gt;
+    &lt;ScrollView
+      refreshControl={
+        &lt;RefreshControl
+          refreshing={
+            isLoadingUpComing || isLoadingPopularMovies || isLoadingTopRated
           }
-        &gt;
-          &lt;BannerCard /&gt;
-          &lt;ListCards
-            resultData={resultsUpComing}
-            titleList={"UpComing"}
-            currentPage={currentPageUpComing}
-            setCurrentPage={setCurrentPageUpComing}
-            isLoading={isLoadingUpComing}
-            totalPages={totalPagesUpComing}
-            error={errorUpComing}
-            isHorizontal={true}
-          /&gt;
-          &lt;ListCards
-            resultData={resultsTopRated}
-            titleList={"TopRated"}
-            currentPage={currentPageTopRated}
-            setCurrentPage={setCurrentTopRated}
-            isLoading={isLoadingTopRated}
-            totalPages={totalPagesTopRated}
-            error={errorTopRated}
-            isHorizontal={true}
-          /&gt;
-          &lt;ListCards
-            resultData={resultsPopularMovies}
-            titleList={"Popular Movies"}
-            currentPage={currentPagePopularMovie}
-            setCurrentPage={setCurrentPagePopularMovie}
-            isLoading={isLoadingPopularMovies}
-            totalPages={totalPagesPopularMovies}
-            error={errorPopularMovies}
-            isHorizontal={true}
-          /&gt;
-        &lt;/ScrollView&gt;
-      &lt;/SplashScreen&gt;
-    &lt;/&gt;
+          onRefresh={onRefresh}
+          progressBackgroundColor={"white"}
+        /&gt;
+      }
+    &gt;
+      &lt;BannerCard /&gt;
+      &lt;ListCards
+        resultData={resultsUpComing}
+        titleList={"UpComing"}
+        currentPage={currentPageUpComing}
+        setCurrentPage={setCurrentPageUpComing}
+        isLoading={isLoadingUpComing}
+        totalPages={totalPagesUpComing}
+        error={errorUpComing}
+        isHorizontal={true}
+        isFetching={isFetchingUpComing}
+      /&gt;
+      &lt;ListCards
+        resultData={resultsTopRated}
+        titleList={"TopRated"}
+        currentPage={currentPageTopRated}
+        setCurrentPage={setCurrentTopRated}
+        isLoading={isLoadingTopRated}
+        totalPages={totalPagesTopRated}
+        error={errorTopRated}
+        isHorizontal={true}
+        isFetching={isFetchingTopRated}
+      /&gt;
+      &lt;ListCards
+        resultData={resultsPopularMovies}
+        titleList={"Popular Movies"}
+        currentPage={currentPagePopularMovie}
+        setCurrentPage={setCurrentPagePopularMovie}
+        isLoading={isLoadingPopularMovies}
+        totalPages={totalPagesPopularMovies}
+        error={errorPopularMovies}
+        isHorizontal={true}
+        isFetching={isFetchingPopularMovies}
+      /&gt;
+    &lt;/ScrollView&gt;
   );
 };
 &nbsp;</pre></td></tr></table></pre>
@@ -358,7 +343,7 @@ export const <span class="cstat-no" title="statement not covered" >DashboardScre
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-09-22T08:37:55.473Z
+                at 2023-09-22T08:54:04.035Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

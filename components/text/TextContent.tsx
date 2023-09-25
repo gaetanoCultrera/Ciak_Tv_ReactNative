@@ -1,6 +1,6 @@
 import React, { FC, memo } from "react";
 import { Text } from "react-native-paper";
-import { IPropsBanner } from "../../interfaces/IPropsCard";
+import { IPropsBanner } from "../../interfaces/index";
 
 export const TextContent: FC<IPropsBanner> = memo(
   ({ title, variant, style }) => (

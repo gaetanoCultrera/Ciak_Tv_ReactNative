@@ -1,6 +1,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { RootFilm, RootFilmById } from "../interfaces/IResponseMovie";
-import { ISearchQueryParams } from "../interfaces/ISearchQueryParams";
+import {
+  RootFilm,
+  RootFilmById,
+  ISearchQueryParams,
+} from "../interfaces/index";
 
 export const filmApi = createApi({
   reducerPath: "filmApi",

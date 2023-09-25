@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { TheaterMaps } from "../../components/maps/TheaterMaps";
+import { TheaterMaps } from "../../components";
 import { useHandleCoords } from "./utils/hooks/useHandleCoords";
 import { useNavigation } from "@react-navigation/native";
 

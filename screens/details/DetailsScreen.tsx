@@ -3,9 +3,8 @@ import { useRoute } from "@react-navigation/native";
 import { useGetUpcomingMoviesByIdQuery } from "../../services/film";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
-import { IDetailsId } from "../../interfaces/IDetailsProps";
-import { DetailsBanner } from "../../components/card/detailsBanner/DetailsBanner";
-import { RenderEmptyList } from "../../components/listCards/utils/renderEmptyList/RenderEmptyList";
+import { IDetailsId } from "../../interfaces/index";
+import { DetailsBanner, RenderEmptyList } from "../../components/index";
 import { TypeList } from "../../constans/TypeList";
 
 export const DetailsScreen = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { RenderPropsTitle } from "../../../../interfaces/IRenderProps";
+import { RenderPropsTitle } from "../../../../interfaces/index";
 import { RenderTitle } from "./RenderTitle";
 import { render } from "@testing-library/react-native";
 

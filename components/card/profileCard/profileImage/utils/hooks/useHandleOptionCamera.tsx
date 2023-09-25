@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { Camera } from "expo-camera";
 import { Alert } from "react-native";
-import { IPropsProfileCamera } from "../../../../../../interfaces/IPropsProfileCamera";
+import { IPropsProfileCamera } from "../../../../../../interfaces/index";
 import { useHandleImagePicker } from "./useHandleImagePicker";
 
 export const useHandleOptionCamera = ({

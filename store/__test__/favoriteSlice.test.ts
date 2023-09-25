@@ -1,4 +1,4 @@
-import { IPropsDetailsBanner } from "../../interfaces/IPropsCard";
+import { IPropsDetailsBanner } from "../../interfaces/index";
 import FavoriteSlice, {
   resetState,
   addDataListFavorite,

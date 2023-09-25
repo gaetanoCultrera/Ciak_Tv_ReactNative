@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react-native";
 import { SearchTextField } from "./SearchTextField";
-import { IPropsTextField } from "../../interfaces/IPropsTextField";
+import { IPropsTextField } from "../../interfaces/index";
 
 const renderComponent = ({ queryString, setQueryString }: IPropsTextField) =>
   render(

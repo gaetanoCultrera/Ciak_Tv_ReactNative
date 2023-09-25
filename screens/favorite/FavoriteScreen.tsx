@@ -42,6 +42,7 @@ export const FavoriteScreen = () => {
           isHorizontal={false}
           numColumn={2}
           typeList={TypeList.FAVORITE}
+          isFetching={false}
         />
       </View>
     </>

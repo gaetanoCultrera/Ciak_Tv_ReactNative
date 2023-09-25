@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/22</span>
+                <span class='fraction'>0/19</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/21</span>
+                <span class='fraction'>0/17</span>
             </div>
         
             
@@ -106,21 +106,10 @@
 <a name='L41'></a><a href='#L41'>41</a>
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
-<a name='L44'></a><a href='#L44'>44</a>
-<a name='L45'></a><a href='#L45'>45</a>
-<a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a>
-<a name='L48'></a><a href='#L48'>48</a>
-<a name='L49'></a><a href='#L49'>49</a>
-<a name='L50'></a><a href='#L50'>50</a>
-<a name='L51'></a><a href='#L51'>51</a>
-<a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L44'></a><a href='#L44'>44</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -131,19 +120,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -175,18 +155,14 @@ import { IPropsTakePicture } from "../../../../../../interfaces/IPropsProfileCam
 import { RootState } from "../../../../../../store/store";
 <span class="cstat-no" title="statement not covered" >import { updateObjectAuth } from "../../../../../../store/signupSlice";</span>
 <span class="cstat-no" title="statement not covered" >import { FlashMode } from "expo-camera";</span>
-<span class="cstat-no" title="statement not covered" >import { useHandleAsyncStorage } from "../../../../../../screens/routing/utils/hooks/useHandleAsyncStorage";</span>
 &nbsp;
 export const <span class="cstat-no" title="statement not covered" >useHandleTakePicture = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(</span>{</span></span>
   cameraRef,
   setFlashMode,
   flashMode,
 }: IPropsTakePicture) =&gt; {
-  const dataUser = <span class="cstat-no" title="statement not covered" >useSelector(</span>
-<span class="fstat-no" title="function not covered" >    ({</span> objectSignUp }: RootState) =&gt; <span class="cstat-no" title="statement not covered" >objectSignUp.dataSignup</span>
-  );
+  const dataUser = <span class="cstat-no" title="statement not covered" >useSelector(<span class="fstat-no" title="function not covered" >({</span> userData }: RootState) =&gt; <span class="cstat-no" title="statement not covered" >userData)</span>;</span>
   const dispatch = <span class="cstat-no" title="statement not covered" >useDispatch();</span>
-  const { setItem } = <span class="cstat-no" title="statement not covered" >useHandleAsyncStorage();</span>
   const handleTakePicture = <span class="cstat-no" title="statement not covered" >useCallback(<span class="fstat-no" title="function not covered" >async </span>() =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (cameraRef.current) {</span>
 <span class="cstat-no" title="statement not covered" >      try {</span>
@@ -194,13 +170,7 @@ export const <span class="cstat-no" title="statement not covered" >useHandleTake
           quality: 0.5,
           base64: true,
         });
-<span class="cstat-no" title="statement not covered" >        await setItem(</span>
-          "userData",
-          JSON.stringify({
-            ...dataUser,
-            uriProfileImg: uri,
-          })
-        );
+&nbsp;
 <span class="cstat-no" title="statement not covered" >        dispatch(</span>
           updateObjectAuth({
             ...dataUser,
@@ -212,7 +182,7 @@ export const <span class="cstat-no" title="statement not covered" >useHandleTake
 <span class="cstat-no" title="statement not covered" >        console.error("Error:", error);</span>
       }
     }
-  }, [cameraRef, dataUser, dispatch, setItem]);
+  }, [cameraRef, dataUser, dispatch]);
 &nbsp;
   const handleFlashMode = <span class="cstat-no" title="statement not covered" >useCallback(<span class="fstat-no" title="function not covered" >() =</span>&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    flashMode === FlashMode.off</span>
@@ -229,7 +199,7 @@ export const <span class="cstat-no" title="statement not covered" >useHandleTake
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-09-22T08:37:55.473Z
+                at 2023-09-22T08:54:04.035Z
             </div>
         <script src="../../../../../../../prettify.js"></script>
         <script>

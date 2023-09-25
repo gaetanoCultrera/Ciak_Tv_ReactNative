@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
-import { IPropsBanner } from "../../interfaces/IPropsCard";
+import { IPropsBanner } from "../../interfaces/index";
 import { TextContent } from "./TextContent";
 import { Variant } from "../../constans/Variant";
 

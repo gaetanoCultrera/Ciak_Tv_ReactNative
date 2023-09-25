@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo } from "react";
 import WebView from "react-native-webview";
-import { IPropsRenderVideo } from "../../../../../interfaces/IPropsRenderGenres";
+import { IPropsRenderVideo } from "../../../../../interfaces/index";
 import { Linking } from "react-native";
 export const useRenderVideo = ({ key }: IPropsRenderVideo) => {
   const renderApp = useCallback(async () => {

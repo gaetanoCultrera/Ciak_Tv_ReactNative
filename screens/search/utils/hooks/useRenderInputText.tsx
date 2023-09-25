@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { IPropsTextField } from "../../../../interfaces/IPropsTextField";
+import { IPropsTextField } from "../../../../interfaces/index";
 import { SearchTextField } from "../../../../components/searchTextField/SearchTextField";
 
 export const useRenderInputText = () => {

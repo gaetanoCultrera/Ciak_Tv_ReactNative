@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { TextContent } from "../../../../text/TextContent";
 import { Variant } from "../../../../../constans/Variant";
-import { IPropsRenderGenres } from "../../../../../interfaces/IPropsRenderGenres";
+import { IPropsRenderGenres } from "../../../../../interfaces/index";
 
 export const useRenderGenres = ({
   genres,

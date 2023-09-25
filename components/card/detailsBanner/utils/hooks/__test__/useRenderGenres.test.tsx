@@ -1,6 +1,6 @@
 import { renderHook } from "@testing-library/react-native";
 import { useRenderGenres } from "../useRenderGenres";
-import { IPropsRenderGenres } from "../../../../../../interfaces/IPropsRenderGenres";
+import { IPropsRenderGenres } from "../../../../../../interfaces/index";
 
 describe("useRenderGenres", () => {
   test("should renders genres correctly", () => {
@@ -15,8 +15,6 @@ describe("useRenderGenres", () => {
 
     const { result } = renderHook(() => useRenderGenres({ ...mockProps }));
 
-    const renderGenres = result.current;
-
-    expect(renderGenres).toHaveLength(3);
+    expect(result.current).toHaveLength(3);
   });
 });

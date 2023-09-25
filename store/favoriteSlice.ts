@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-import { IPropsDetailsBanner } from "../interfaces/IPropsCard";
+import { IPropsDetailsBanner } from "../interfaces/index";
 
 export interface DataFavorite {
   favoriteList: IPropsDetailsBanner[];

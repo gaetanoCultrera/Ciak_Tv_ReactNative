@@ -1,7 +1,7 @@
 import React, { useState, FC, memo, useRef } from "react";
 import { View, TouchableOpacity } from "react-native";
 import { Camera, CameraType, FlashMode } from "expo-camera";
-import { IPropsProfileCamera } from "../../../../interfaces/IPropsProfileCamera";
+import { IPropsProfileCamera } from "../../../../interfaces/index";
 import { useHandleCameraType } from "./utils/hooks/useHandleCameraType";
 import { button, buttonContainer, camera, container } from "./style";
 import { useHandleTakePicture } from "./utils/hooks/useHandleTakePicture";

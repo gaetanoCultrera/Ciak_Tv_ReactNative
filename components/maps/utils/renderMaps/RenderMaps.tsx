@@ -1,5 +1,5 @@
 import React, { FC, memo } from "react";
-import { ICustomPropsMaps } from "../../../../interfaces/ICustomPropsMaps";
+import { ICustomPropsMaps } from "../../../../interfaces/index";
 import { View } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 

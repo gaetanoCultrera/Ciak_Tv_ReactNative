@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { IFormAuth } from "../../../../../interfaces";
+import { IFormAuth } from "../../../../../interfaces/index";
 import { useDispatch } from "react-redux";
 import { updateObjectAuth } from "../../../../../store/signupSlice";
 

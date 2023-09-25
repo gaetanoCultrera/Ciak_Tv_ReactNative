@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import { AppRegistry } from "react-native";
+import { registerRootComponent } from "expo";
 import { Provider } from "react-redux";
 import RootNavigator from "./screens/routing/RootNavigator";
 import { persistor, setupStore } from "./store/store";
@@ -8,9 +8,9 @@ import LottieView from "lottie-react-native";
 import splashScreen from "./assets/animation/ciak.json";
 //di caricamento: Il valore di caricamento fornito sarà reso fino al completamento della persistenza e a quel punto saranno resi i bambini.
 //TODO render empty list skeleton nel login
-const { registerComponent } = AppRegistry;
+
 export default function App() {
-  registerComponent("RootNavigator", () => RootNavigator);
+  registerRootComponent(RootNavigator);
   const LazyNavigator = lazy(() => import("./screens/routing/RootNavigator"));
   return (
     <Provider store={setupStore}>

@@ -2,10 +2,13 @@ import { useCallback } from "react";
 import { updateObjectAuth } from "../../../../../store/signupSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../../../store/store";
-import { IFormProfile } from "../../../../../interfaces/IFormAuth";
-import { IOnSubmitProp } from "../../../../../interfaces/IOnSubmitProp";
+import { IFormProfile, IOnSubmitProp } from "../../../../../interfaces/index";
 import { ToastAndroid, Linking, Alert } from "react-native";
-import { authenticateAsync } from "expo-local-authentication";
+import {
+  authenticateAsync,
+  hasHardwareAsync,
+  isEnrolledAsync,
+} from "expo-local-authentication";
 
 export const useHandleProfile = () => {
   const dataUser = useSelector(({ userData }: RootState) => userData);

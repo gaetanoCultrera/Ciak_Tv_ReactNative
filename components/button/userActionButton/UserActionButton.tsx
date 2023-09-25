@@ -1,6 +1,6 @@
 import React, { memo, FC } from "react";
 import { Button } from "react-native-paper";
-import { IPropsButton } from "../../../interfaces/IPropsButton";
+import { IPropsButton } from "../../../interfaces/index";
 
 export const UserActionButton: FC<IPropsButton> = memo(
   ({ handleAction, icon, title }) => {

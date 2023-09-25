@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { ChangePassword } from "../../components";
-import { ProfileCard } from "../../components/card/profileCard/ProfileCard";
+import { ChangePassword, ProfileCard, ProfileCamera } from "../../components";
 import { useRenderIcon } from "../routing/utils/hooks/useRenderIcon";
-import { ProfileCamera } from "../../components/card/profileCard/profileCamera/ProfileCamera";
 import { useIsFocused, useNavigation } from "@react-navigation/native";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";

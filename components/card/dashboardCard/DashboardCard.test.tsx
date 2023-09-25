@@ -2,7 +2,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react-native";
 import { DashboardCard } from "./DashboardCard";
-import { CustomDataCard } from "../../../interfaces/IResponseMovie";
+import { CustomDataCard } from "../../../interfaces/index";
 
 const mockNavigate = jest.fn();
 jest.mock("@react-navigation/native", () => ({

@@ -1,5 +1,5 @@
 import React, { FC, memo } from "react";
-import { IPropsTextField } from "../../interfaces/IPropsTextField";
+import { IPropsTextField } from "../../interfaces/index";
 import { View } from "react-native";
 import { TextInput } from "react-native-paper";
 import { useRenderIcon } from "../../screens/routing/utils/hooks/useRenderIcon";

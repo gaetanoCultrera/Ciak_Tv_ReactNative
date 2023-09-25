@@ -3,7 +3,7 @@ import { AvatarIcon } from "../../..";
 
 export const useRenderLeftContent = () => {
   return useCallback(
-    (nameIcon: string) => <AvatarIcon nameIcon={nameIcon} />,
+    (nameIcon: string) => <AvatarIcon size={20} nameIcon={nameIcon} />,
     []
   );
 };

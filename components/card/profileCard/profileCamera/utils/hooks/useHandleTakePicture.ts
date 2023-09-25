@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { IPropsTakePicture } from "../../../../../../interfaces/IPropsProfileCamera";
+import { IPropsTakePicture } from "../../../../../../interfaces/index";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../../../../store/store";
 import { updateObjectAuth } from "../../../../../../store/signupSlice";

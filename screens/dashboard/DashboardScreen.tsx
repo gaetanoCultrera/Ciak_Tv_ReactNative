@@ -5,8 +5,7 @@ import {
   useGetPopularMovieQuery,
   useGetUpcomingMoviesQuery,
 } from "../../services/film";
-import { ListCards } from "../../components";
-import { BannerCard } from "../../components/card/bannerCard/BannerCard";
+import { ListCards, BannerCard } from "../../components";
 import { useSetOnRefresh } from "./utils/hooks/useSetOnRefresh";
 
 export const DashboardScreen = () => {
