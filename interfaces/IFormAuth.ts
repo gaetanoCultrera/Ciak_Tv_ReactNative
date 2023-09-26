@@ -3,7 +3,7 @@ export interface IFormAuth {
   email: string;
   password: string;
   confirmPassword?: string;
-  uriProfileImg: string;
+  uriProfileImg?: string;
   isLogged: boolean;
 }
 

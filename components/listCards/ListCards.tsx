@@ -37,7 +37,6 @@ export const ListCards: FC<IPropsCard> = memo(
       // onEndReachedThreshold={0.5} legato alla distanza dal fondo
       <>
         <RenderTitle dataLength={resultData?.length} title={titleList} />
-
         <FlatList
           nestedScrollEnabled
           horizontal={isHorizontal}
