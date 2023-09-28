@@ -9,8 +9,10 @@ import { TypeList } from "../../constans/TypeList";
 
 export const SearchScreen = () => {
   const navigation = useNavigation();
+  const [isScrolling, setIsScrolling] = useState(false);
   const [queryString, setQueryString] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+
   const {
     data: { results, total_pages } = {},
     error,
@@ -19,12 +21,14 @@ export const SearchScreen = () => {
   } = useGetFilmBySearchQuery({
     queryString: queryString,
     pageNumber: currentPage,
+    isScrolling: isScrolling,
   });
   const renderTextField = useRenderInputText();
 
   useEffect(() => {
     navigation.setOptions({
-      header: () => renderTextField({ queryString, setQueryString }),
+      header: () =>
+        renderTextField({ queryString, setQueryString, setIsScrolling }),
     });
   }, [navigation, queryString, renderTextField]);
 
@@ -42,6 +46,7 @@ export const SearchScreen = () => {
         numColumn={2}
         isFetching={isFetching}
         typeList={TypeList.FAVORITE}
+        setIsScrolling={setIsScrolling}
       />
     </SafeAreaView>
   );

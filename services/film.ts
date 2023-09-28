@@ -13,12 +13,14 @@ export const filmApi = createApi({
       headers.set("Authorization", `Bearer ${process.env.EXPO_PUBLIC_API_KEY}`);
     },
   }),
+
   refetchOnFocus: true,
   refetchOnReconnect: true,
-
+  tagTypes: ["UpComing", "TopRated", "Popular", "Search", "UpComingById"],
   endpoints: (builder) => ({
     getUpcomingMovies: builder.query<RootFilm, number>({
       query: (numberPage: number) => `/movie/upcoming?page=${numberPage}`,
+      providesTags: ["UpComing"],
       serializeQueryArgs: ({ endpointName }) => {
         return endpointName;
       },
@@ -37,6 +39,7 @@ export const filmApi = createApi({
     }),
     getTopRatedMovies: builder.query<RootFilm, number>({
       query: (numberPage: number) => `/movie/top_rated?page=${numberPage}`,
+      providesTags: ["TopRated"],
       serializeQueryArgs: ({ endpointName }) => {
         return endpointName;
       },
@@ -55,6 +58,7 @@ export const filmApi = createApi({
     }),
     getPopularMovie: builder.query<RootFilm, number>({
       query: (numberPage: number) => `/movie/popular?page=${numberPage}`,
+      providesTags: ["Popular"],
       serializeQueryArgs: ({ endpointName }) => {
         return endpointName;
       },
@@ -74,18 +78,30 @@ export const filmApi = createApi({
     getFilmBySearch: builder.query<RootFilm, ISearchQueryParams>({
       query: ({ queryString, pageNumber }) =>
         `/search/movie?query=${queryString.trim()}&page=${pageNumber}`,
+      providesTags: ["Search"],
+
       serializeQueryArgs: ({ endpointName }) => {
         return endpointName;
       },
+      // arr.filter((v,i,a)=>a.findIndex(v2=>(v2.id===v.id))===i)
       merge: (
         { results: resultsCache },
-        { results, page, total_pages, total_results }
-      ) => ({
-        page: page,
-        results: [...resultsCache, ...results],
-        total_pages: total_pages,
-        total_results: total_results,
-      }),
+        { results, page, total_pages, total_results },
+        { arg: { isScrolling } }
+      ) => {
+        const mergedResult = isScrolling
+          ? [...resultsCache, ...results].filter(
+              (value, index, self) =>
+                self.findIndex((value2) => value2.id === value.id) === index
+            )
+          : [...results];
+        return {
+          page: page,
+          results: mergedResult,
+          total_pages: total_pages,
+          total_results: total_results,
+        };
+      },
       forceRefetch({ currentArg, previousArg }) {
         return currentArg !== previousArg;
       },

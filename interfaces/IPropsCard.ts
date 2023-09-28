@@ -16,6 +16,7 @@ export interface IPropsCard {
   numColumn?: number;
   isFetching: boolean;
   typeList?: TypeList;
+  setIsScrolling?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface IPropsBanner {

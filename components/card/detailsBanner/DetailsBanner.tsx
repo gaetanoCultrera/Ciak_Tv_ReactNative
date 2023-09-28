@@ -73,7 +73,7 @@ export const DetailsBanner: FC<IPropsDetailsBanner> = memo((props) => {
                 icon="heart"
                 iconColor={isFavorite ? "red" : "white"}
                 size={50}
-                onPress={() => void handleFavorite()}
+                onPress={() => handleFavorite()}
               />
               {/* gestione di una promise da un custom hook */}
             </Animatable.View>

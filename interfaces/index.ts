@@ -43,6 +43,7 @@ import {
 } from "./IRenderProps";
 import { ISearchQueryParams } from "./ISearchQueryParams";
 import { RootStackParamListType } from "./RootStackParamListType";
+import { ICustomRefreshProps } from "./ICustomRefreshProps";
 
 export {
   IFormAuth,
@@ -81,4 +82,5 @@ export {
   ISearchQueryParams,
   RootStackParamListType,
   IFormProfile,
+  ICustomRefreshProps,
 };

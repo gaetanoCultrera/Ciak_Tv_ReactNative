@@ -4,7 +4,7 @@ import { IPropsCard } from "../../interfaces/index";
 import { RenderEmptyList } from "./utils/renderEmptyList/RenderEmptyList";
 import { RenderTitle } from "./utils/renderTitle/RenderTitle";
 import { useRenderParamsList } from "./utils/hooks/useRenderParamsList";
-
+//TODO flashlist
 export const ListCards: FC<IPropsCard> = memo(
   ({
     titleList,
@@ -18,6 +18,7 @@ export const ListCards: FC<IPropsCard> = memo(
     numColumn,
     typeList,
     isFetching,
+    setIsScrolling,
   }) => {
     const resultDataLength = resultData?.length;
     const {
@@ -32,15 +33,18 @@ export const ListCards: FC<IPropsCard> = memo(
       isFetching,
       setCurrentPage,
       totalPages,
+      setIsScrolling,
     });
     return (
       // onEndReachedThreshold={0.5} legato alla distanza dal fondo
       <>
         <RenderTitle dataLength={resultData?.length} title={titleList} />
         <FlatList
-          nestedScrollEnabled
+          // ottimizza la lista
+          removeClippedSubviews
           horizontal={isHorizontal}
           numColumns={(numColumn as number) ?? null}
+          // estimatedItemSize={200}
           ListEmptyComponent={
             <RenderEmptyList
               isLoading={isLoading}
@@ -54,7 +58,7 @@ export const ListCards: FC<IPropsCard> = memo(
           onEndReachedThreshold={0}
           onEndReached={handleSetPagination}
           renderItem={({ item }) => renderItemList(item)}
-          keyExtractor={({ id }) => handleKeyExtractor(id)}
+          keyExtractor={handleKeyExtractor}
         />
       </>
     );

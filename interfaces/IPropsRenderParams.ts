@@ -7,4 +7,5 @@ export interface IPropsRenderParams {
   setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
   isFetching: boolean;
   totalPages?: number;
+  setIsScrolling?: React.Dispatch<React.SetStateAction<boolean>>;
 }

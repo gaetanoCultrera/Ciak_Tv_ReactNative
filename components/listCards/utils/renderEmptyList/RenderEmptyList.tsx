@@ -3,13 +3,14 @@ import {
   RenderPropsEmptyList,
   ICustomError,
 } from "../../../../interfaces/index";
+import LottieView from "lottie-react-native";
 import { isFetchBaseQueryError } from "../Typeguard";
 import { TextContent } from "../../../text/TextContent";
 import { Variant } from "../../../../constans/Variant";
 import { View } from "react-native-animatable";
 import { LoadingCardsArray } from "./utils/loadingCardsArray/LoadingCardArray";
-import { directionRowLoadingCard, directionColumnLoadingCard } from "./style";
-
+import { directionRowLoadingCard, positionLoading } from "./style";
+import loading from "../../../../assets/animation/loading.json";
 export const RenderEmptyList: FC<RenderPropsEmptyList> = ({
   isLoading,
   error,
@@ -22,8 +23,13 @@ export const RenderEmptyList: FC<RenderPropsEmptyList> = ({
           <LoadingCardsArray length={3} />
         </View>
       ) : (
-        <View style={directionColumnLoadingCard}>
-          <LoadingCardsArray length={1} />
+        <View style={positionLoading}>
+          <LottieView
+            source={loading}
+            autoPlay
+            loop
+            style={{ width: 150, height: 150 }}
+          />
         </View>
       );
     }

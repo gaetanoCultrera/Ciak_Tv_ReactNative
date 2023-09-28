@@ -10,6 +10,7 @@ import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { TextContent } from "../../text/TextContent";
 import { Variant } from "../../../constans/Variant";
+import { Route } from "../../../constans/Route";
 
 //non è possibile utilizzare require in un file typescript perchè deve essere rinosciuto al momemnto della compilazione, quindi solo immagini statiche
 
@@ -25,7 +26,7 @@ export const DashboardCard: FC<CustomDataCard> = memo(
       <View style={{ padding: 10 }}>
         <Card
           style={{ width: 150 }}
-          onPress={() => navigation.navigate("Details", { movieId: id })}
+          onPress={() => navigation.navigate(Route.DETAILS, { movieId: id })}
         >
           <Card.Cover
             testID="cardImage"

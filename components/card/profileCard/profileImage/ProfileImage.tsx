@@ -12,7 +12,6 @@ export const ProfileImage: FC<IPropsProfileCamera> = ({
   uriImage,
 }) => {
   const __startCamera = useHandleOptionCamera({ setShowCamera });
-  //TODO gestione promise da custom hook
   return (
     <View style={{ display: "flex", alignItems: "center" }}>
       <TouchableOpacity onPress={() => void __startCamera()}>

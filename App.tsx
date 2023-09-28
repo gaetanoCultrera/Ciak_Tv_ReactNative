@@ -7,11 +7,11 @@ import { PersistGate } from "redux-persist/integration/react";
 import LottieView from "lottie-react-native";
 import splashScreen from "./assets/animation/ciak.json";
 //di caricamento: Il valore di caricamento fornito sarà reso fino al completamento della persistenza e a quel punto saranno resi i bambini.
-//TODO render empty list skeleton nel login
 
 export default function App() {
   registerRootComponent(RootNavigator);
   const LazyNavigator = lazy(() => import("./screens/routing/RootNavigator"));
+
   return (
     <Provider store={setupStore}>
       <PersistGate
