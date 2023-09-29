@@ -18,6 +18,7 @@ export const ListCards: FC<IPropsCard> = memo(
     numColumn,
     typeList,
     isFetching,
+    isScrolling,
     setIsScrolling,
   }) => {
     const resultDataLength = resultData?.length;
@@ -34,6 +35,7 @@ export const ListCards: FC<IPropsCard> = memo(
       setCurrentPage,
       totalPages,
       setIsScrolling,
+      isScrolling,
     });
     return (
       // onEndReachedThreshold={0.5} legato alla distanza dal fondo

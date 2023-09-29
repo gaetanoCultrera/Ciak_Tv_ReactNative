@@ -15,6 +15,7 @@ export const useRenderParamsList = ({
   setCurrentPage,
   totalPages,
   setIsScrolling,
+  isScrolling,
 }: IPropsRenderParams) => {
   const renderCurrentPagination = useCallback(
     () =>
@@ -31,10 +32,18 @@ export const useRenderParamsList = ({
   // : null,
   const handleSetPagination = useCallback(() => {
     if (!isFetching && currentPage < (totalPages as number)) {
-      if (setIsScrolling) setIsScrolling(true);
+      // if (setIsScrolling) setIsScrolling(true) è la stessa cosa di setIsScrolling?.(true);
+      if (!isScrolling) setIsScrolling?.(true);
       setCurrentPage((prev) => prev + 1);
     }
-  }, [currentPage, isFetching, setCurrentPage, setIsScrolling, totalPages]);
+  }, [
+    currentPage,
+    isFetching,
+    isScrolling,
+    setCurrentPage,
+    setIsScrolling,
+    totalPages,
+  ]);
 
   const renderItemList = useCallback(
     ({ id, title, poster_path }: CustomDataCard) => (

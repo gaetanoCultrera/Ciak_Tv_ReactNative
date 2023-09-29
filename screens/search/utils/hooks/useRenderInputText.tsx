@@ -4,8 +4,14 @@ import { SearchTextField } from "../../../../components/searchTextField/SearchTe
 
 export const useRenderInputText = () => {
   return useCallback(
-    ({ queryString, setQueryString, setIsScrolling }: IPropsTextField) => (
+    ({
+      queryString,
+      setQueryString,
+      setIsScrolling,
+      isScrolling,
+    }: IPropsTextField) => (
       <SearchTextField
+        isScrolling={isScrolling}
         queryString={queryString}
         setQueryString={setQueryString}
         setIsScrolling={setIsScrolling}

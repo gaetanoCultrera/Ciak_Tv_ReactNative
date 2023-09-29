@@ -5,7 +5,7 @@ import { TextInput } from "react-native-paper";
 import { useRenderIcon } from "../../screens/routing/utils/hooks/useRenderIcon";
 
 export const SearchTextField: FC<IPropsTextField> = memo(
-  ({ queryString, setQueryString, setIsScrolling }) => {
+  ({ queryString, setQueryString, setIsScrolling, isScrolling }) => {
     const { renderIcon } = useRenderIcon();
     return (
       <View style={{ padding: 40 }}>
@@ -13,7 +13,7 @@ export const SearchTextField: FC<IPropsTextField> = memo(
           testID="customTextInput"
           label="Search"
           onChangeText={(text) => {
-            setIsScrolling(false);
+            if (isScrolling) setIsScrolling(false);
             setQueryString(text);
           }}
           placeholder="term to search"

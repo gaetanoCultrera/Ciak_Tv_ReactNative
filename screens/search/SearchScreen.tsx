@@ -28,9 +28,14 @@ export const SearchScreen = () => {
   useEffect(() => {
     navigation.setOptions({
       header: () =>
-        renderTextField({ queryString, setQueryString, setIsScrolling }),
+        renderTextField({
+          queryString,
+          setQueryString,
+          setIsScrolling,
+          isScrolling,
+        }),
     });
-  }, [navigation, queryString, renderTextField]);
+  }, [isScrolling, navigation, queryString, renderTextField]);
 
   return (
     <SafeAreaView style={containerSearch}>
@@ -46,6 +51,7 @@ export const SearchScreen = () => {
         numColumn={2}
         isFetching={isFetching}
         typeList={TypeList.FAVORITE}
+        isScrolling={isScrolling}
         setIsScrolling={setIsScrolling}
       />
     </SafeAreaView>

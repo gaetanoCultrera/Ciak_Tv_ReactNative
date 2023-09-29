@@ -67,7 +67,10 @@ export const filmApi = createApi({
         { results, page, total_pages, total_results }
       ) => ({
         page: page,
-        results: [...resultsCache, ...results],
+        results: [...resultsCache, ...results].filter(
+          (value, index, self) =>
+            self.findIndex((value2) => value2.id === value.id) === index
+        ),
         total_pages: total_pages,
         total_results: total_results,
       }),

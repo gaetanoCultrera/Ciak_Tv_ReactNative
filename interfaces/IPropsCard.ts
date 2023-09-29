@@ -16,6 +16,7 @@ export interface IPropsCard {
   numColumn?: number;
   isFetching: boolean;
   typeList?: TypeList;
+  isScrolling?: boolean;
   setIsScrolling?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
